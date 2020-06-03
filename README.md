@@ -1,9 +1,9 @@
 ![](https://i.imgur.com/XeoQXuW.png)
 
-# WDI Singapore
+# SEI Singapore
 
-Welcome to General Assembly's Web Development Immersive - Singapore Edition!
-[This Gitbook](https://wdi-sg.github.io/gitbook-2018/) is the primary resource used throughout the course, save it to your favorites and refer to it often!
+Welcome to General Assembly's Software Engineering Immersive - Singapore Edition!
+[This Gitbook](https://wdi-sg.github.io/gitbook2020/) is the primary resource used throughout the course, save it to your favorites and refer to it often!
 
 ## Important Policies
 
@@ -16,7 +16,7 @@ You should have completed the prework in preparation for the course. This is to 
 
 #### Attendance
 
-Our attendance policy for graduation is no more than 4 absences during the
+Our attendance policy for graduation is no more than 3 absences during the
 course. 15 minutes late = 1 tardy. 3 tardies = 1 absence.
 
 If you know you'll be late or absent, please let us know and we'll arrange

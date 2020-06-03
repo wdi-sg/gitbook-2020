@@ -11,21 +11,21 @@
 
 [intro slides]
 
-[Command Line](https://wdi-sg.github.io/gitbook-2019/01-tools/command-line/01readme.html)
+[Command Line](https://wdi-sg.github.io/gitbook2020/01-tools/command-line/01readme.html)
 
-[Command Line Lab](https://wdi-sg.github.io/gitbook-2019/01-tools/command-line/command-line-lab.html)
+[Command Line Lab](https://wdi-sg.github.io/gitbook2020/01-tools/command-line/command-line-lab.html)
 
-[js intro](https://wdi-sg.github.io/gitbook-2019/02-js-intro/01-operations.html)
+[js intro](https://wdi-sg.github.io/gitbook2020/02-js-intro/01-operations.html)
 
-[pair programming](https://wdi-sg.github.io/gitbook-2019/01-workflow/pairing.html)
+[pair programming](https://wdi-sg.github.io/gitbook2020/01-workflow/pairing.html)
 
-[js operations](https://wdi-sg.github.io/gitbook-2019/02-js-intro/01-operations.html)
+[js operations](https://wdi-sg.github.io/gitbook2020/02-js-intro/01-operations.html)
 
-[js conditionals](https://wdi-sg.github.io/gitbook-2019/02-js-intro/02-conditionals.html)
+[js conditionals](https://wdi-sg.github.io/gitbook2020/02-js-intro/02-conditionals.html)
 
-[local git](https://wdi-sg.github.io/gitbook-2019/01-tools/intro-git/readme.html)
+[local git](https://wdi-sg.github.io/gitbook2020/01-tools/intro-git/readme.html)
 
-[CSS Selectors](https://wdi-sg.github.io/gitbook-2019/03-html-css/css-selectors/readme.html)
+[CSS Selectors](https://wdi-sg.github.io/gitbook2020/03-html-css/css-selectors/readme.html)
 
 
 ##### Assignment
@@ -43,20 +43,20 @@
 ##### Topics
 
 
-[standup](https://wdi-sg.github.io/gitbook-2019/01-workflow/standup.html)
+[standup](https://wdi-sg.github.io/gitbook2020/01-workflow/standup.html)
 
 
-[functions](https://wdi-sg.github.io/gitbook-2019/02-js-intro/03-functions.html)
+[functions](https://wdi-sg.github.io/gitbook2020/02-js-intro/03-functions.html)
 
-[js template](https://wdi-sg.github.io/gitbook-2019/02-js-intro/04-template.html)
-
-
-[Remote Git](https://wdi-sg.github.io/gitbook-2019/01-tools/intro-git/04remotegit.html)
-
-[git cheatsheet](https://github.com/wdi-sg/gitbook-2019/blob/master/01-tools/intro-git/06remotefork.md)
+[js template](https://wdi-sg.github.io/gitbook2020/02-js-intro/04-template.html)
 
 
-[CSS Box Model](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/02box-model.html)
+[Remote Git](https://wdi-sg.github.io/gitbook2020/01-tools/intro-git/04remotegit.html)
+
+[git cheatsheet](https://github.com/wdi-sg/gitbook2020/blob/master/01-tools/intro-git/06remotefork.md)
+
+
+[CSS Box Model](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/02box-model.html)
 
 [Box Model Lab](https://github.com/wdi-sg/box-model-lab)
 
@@ -73,13 +73,13 @@
 ##### Topics
 
 
-[js loops](https://wdi-sg.github.io/gitbook-2019/02-js-intro/07-arrays-loops.html)
+[js loops](https://wdi-sg.github.io/gitbook2020/02-js-intro/07-arrays-loops.html)
 
-[js objects](https://wdi-sg.github.io/gitbook-2019/02-js-intro/06-objects.html)
+[js objects](https://wdi-sg.github.io/gitbook2020/02-js-intro/06-objects.html)
 
-[how to design](https://wdi-sg.github.io/gitbook-2019/02-js-intro/05-design.html)
+[how to design](https://wdi-sg.github.io/gitbook2020/02-js-intro/05-design.html)
 
-[CSS Display / Positioning](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/03display-positioning.html)
+[CSS Display / Positioning](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/03display-positioning.html)
 
 
 ##### Assignment
@@ -96,13 +96,13 @@
 
 [how to program]
 
-[js iteration](https://wdi-sg.github.io/gitbook-2019/02-js-intro/09-iteration.html)
-[CSS Layout](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/07layout.html)
+[js iteration](https://wdi-sg.github.io/gitbook2020/02-js-intro/09-iteration.html)
+[CSS Layout](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/07layout.html)
 
 
 
 
-[dev tools](https://wdi-sg.github.io/gitbook-2019/02-js-intro/10-chrome-dev-tools.html)
+[dev tools](https://wdi-sg.github.io/gitbook2020/02-js-intro/10-chrome-dev-tools.html)
 
 [Google Shopping Functions](https://github.com/wdi-sg/google-shopping-functions)
 
@@ -119,14 +119,14 @@
 
 ##### Topics
 
-[js more iteration](https://wdi-sg.github.io/gitbook-2019/02-js-intro/11-more-iteration.html)
+[js more iteration](https://wdi-sg.github.io/gitbook2020/02-js-intro/11-more-iteration.html)
 
-[js set timeout](https://wdi-sg.github.io/gitbook-2019/02-js/js-callbacks-iterators/readme.html)
+[js set timeout](https://wdi-sg.github.io/gitbook2020/02-js/js-callbacks-iterators/readme.html)
 
-[CSS Responsive](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/02responsivedesign.html)
+[CSS Responsive](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/02responsivedesign.html)
 
 
-[Code Review Ex](https://wdi-sg.github.io/gitbook-2019/01-workflow/code-review.html)
+[Code Review Ex](https://wdi-sg.github.io/gitbook2020/01-workflow/code-review.html)
 
 ##### Assignment
 
@@ -141,14 +141,14 @@
 [CSS Airbnb](https://github.com/wdi-sg/css-airbnb)
 ##### Topics
 
-[Browser JS](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/readme.html)
+[Browser JS](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/readme.html)
 
-[JS DOM](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/js-dom-manipulation.html)
+[JS DOM](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/js-dom-manipulation.html)
 
-[JS DOM CREATION](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/js-dom-manipulation-creation.html)
+[JS DOM CREATION](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/js-dom-manipulation-creation.html)
 
 
-[CSS Flex Box](https://wdi-sg.github.io/gitbook-2019/03-html-css/positioning/08layout-flexbox.html)
+[CSS Flex Box](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/08layout-flexbox.html)
 
 
 [Flexbox Froggy](https://flexboxfroggy.com/)
@@ -175,9 +175,9 @@ https://github.com/wdi-sg/brook-and-lyn
 
 ##### Topics
 
-[JS DOM Events](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/js-dom-events.html)
+[JS DOM Events](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/js-dom-events.html)
 
-[CSS Bootstrap](https://wdi-sg.github.io/gitbook-2019/03-html-css/css-bootstrap/bootstrap.html)
+[CSS Bootstrap](https://wdi-sg.github.io/gitbook2020/03-html-css/css-bootstrap/bootstrap.html)
 
 
 
@@ -191,7 +191,7 @@ https://github.com/wdi-sg/brook-and-lyn
 
 
 ##### Topics
-[JS Browser Scope](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/scope.html)
+[JS Browser Scope](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/scope.html)
 
 ##### Assignment
 
@@ -205,7 +205,7 @@ https://github.com/wdi-sg/brook-and-lyn
 [CSS Pokedex](https://github.com/wdi-sg/pokedex-css)
 
 ##### Topics
-[AJAX](https://wdi-sg.github.io/gitbook-2019/02-js/browser-js/ajax.html)
+[AJAX](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/ajax.html)
 
 ##### Assignment
 [TV Browser](https://github.com/wdi-sg/tv-browser)
@@ -218,7 +218,7 @@ Code Review
 ##### Assignment
 
 
-[InstallFest](https://wdi-sg.github.io/gitbook-2019/00-config-deployment/installfest/osx/install2.html)
+[InstallFest](https://wdi-sg.github.io/gitbook2020/00-config-deployment/installfest/osx/install2.html)
 
 # Unit 2
 
@@ -230,9 +230,9 @@ Code Review
 ##### Morning Exercise
 
 ##### Topics
-[node](https://wdi-sg.github.io/gitbook-2019/04-server/00node.html)
-[ES6](https://wdi-sg.github.io/gitbook-2019/04-server/00es6.html)
-[Node Modules](https://wdi-sg.github.io/gitbook-2019/04-server/01modules.html)
+[node](https://wdi-sg.github.io/gitbook2020/04-server/00node.html)
+[ES6](https://wdi-sg.github.io/gitbook2020/04-server/00es6.html)
+[Node Modules](https://wdi-sg.github.io/gitbook2020/04-server/01modules.html)
 
 ##### Assignment
 https://github.com/wdi-sg/cli-css
@@ -243,10 +243,10 @@ https://github.com/wdi-sg/cli-css
 
 
 #### Day 2
-[NPM](https://wdi-sg.github.io/gitbook-2019/04-server/01npm.html)
-[FlatFile](https://wdi-sg.github.io/gitbook-2019/04-server/02flatfile.html)
-[Internet Lab](https://wdi-sg.github.io/gitbook-2019/04-server/internet-lab.html)
-[Internet Lab 2](https://wdi-sg.github.io/gitbook-2019/04-server/internet-lab-2.html)
+[NPM](https://wdi-sg.github.io/gitbook2020/04-server/01npm.html)
+[FlatFile](https://wdi-sg.github.io/gitbook2020/04-server/02flatfile.html)
+[Internet Lab](https://wdi-sg.github.io/gitbook2020/04-server/internet-lab.html)
+[Internet Lab 2](https://wdi-sg.github.io/gitbook2020/04-server/internet-lab-2.html)
 
 
 ##### Assignment
@@ -262,8 +262,8 @@ https://github.com/wdi-sg/cli-css
 
 ##### Topics
 
-[Express Intro](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/readme.html)
-[Express URL](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/03expressurls.html)
+[Express Intro](https://wdi-sg.github.io/gitbook2020/05-express/express-intro/readme.html)
+[Express URL](https://wdi-sg.github.io/gitbook2020/05-express/express-intro/03expressurls.html)
 
 ##### Assignment
 [Pokedex Express](https://github.com/wdi-sg/pokedex-express)
@@ -276,9 +276,9 @@ https://github.com/wdi-sg/cli-css
 
 ##### Topics
 
-[Express Views](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/04views.html)
+[Express Views](https://wdi-sg.github.io/gitbook2020/05-express/express-intro/04views.html)
 
-[Express POST](https://wdi-sg.github.io/gitbook-2019/05-express/express-crud/post.html)
+[Express POST](https://wdi-sg.github.io/gitbook2020/05-express/express-crud/post.html)
 
 ##### Assignment
 
@@ -293,11 +293,11 @@ https://github.com/wdi-sg/cli-css
 
 ##### Topics
 
-[JS iterators (map)](https://wdi-sg.github.io/gitbook-2019/02-js/js-callbacks-iterators/callbacks2.html)
+[JS iterators (map)](https://wdi-sg.github.io/gitbook2020/02-js/js-callbacks-iterators/callbacks2.html)
 
-[Express Views 2](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/05views-2.html)
+[Express Views 2](https://wdi-sg.github.io/gitbook2020/05-express/express-intro/05views-2.html)
 
-[Express Update Delete](https://wdi-sg.github.io/gitbook-2019/05-express/express-crud/08update-delete.html)
+[Express Update Delete](https://wdi-sg.github.io/gitbook2020/05-express/express-crud/08update-delete.html)
 
 
 ##### Assignment
@@ -312,9 +312,9 @@ https://github.com/wdi-sg/cli-css
 
 ##### Topics
 
-[git branching](https://wdi-sg.github.io/gitbook-2019/11-groups/00branching.html)
+[git branching](https://wdi-sg.github.io/gitbook2020/11-groups/00branching.html)
 
-[Express Components](https://wdi-sg.github.io/gitbook-2019/05-express/express-intro/components.html)
+[Express Components](https://wdi-sg.github.io/gitbook2020/05-express/express-intro/components.html)
 
 
 
@@ -331,9 +331,9 @@ code reading
 
 ##### Topics
 
-[JS Testing](https://wdi-sg.github.io/gitbook-2019/02-js/js-testing/readme.html)
+[JS Testing](https://wdi-sg.github.io/gitbook2020/02-js/js-testing/readme.html)
 
-[sql intro](https://wdi-sg.github.io/gitbook-2019/04-databases/sql-intro/sql.html)
+[sql intro](https://wdi-sg.github.io/gitbook2020/04-databases/sql-intro/sql.html)
 
 
 
@@ -343,7 +343,7 @@ code reading
 [recipie keeper](https://github.com/wdi-sg/recipe-keeper)
 
 
-[SQL Install Fest](https://wdi-sg.github.io/gitbook-2019/00-config-deployment/installfest/osx/install2.html)
+[SQL Install Fest](https://wdi-sg.github.io/gitbook2020/00-config-deployment/installfest/osx/install2.html)
 
 
 ### Week 3
@@ -355,8 +355,8 @@ code reading
 [CS - Big O](https://my.generalassemb.ly/activities/511)
 
 ##### Topics
-[Postgres](https://wdi-sg.github.io/gitbook-2019/04-databases/postgres/readme.html)
-[SQL Node](https://wdi-sg.github.io/gitbook-2019/04-databases/postgres/sql-node.html)
+[Postgres](https://wdi-sg.github.io/gitbook2020/04-databases/postgres/readme.html)
+[SQL Node](https://wdi-sg.github.io/gitbook2020/04-databases/postgres/sql-node.html)
 
 ##### Assignment
 [CLI todo SQL](https://github.com/wdi-sg/cli-todo-sql)
@@ -367,9 +367,9 @@ code reading
 [CS - Recursion](https://my.generalassemb.ly/activities/773)
 
 ##### Topics
-[Relational SQL](https://wdi-sg.github.io/gitbook-2019/04-databases/relational/relational.html)
-[Node Postgres Setup](https://wdi-sg.github.io/gitbook-2019/04-databases/postgres/sql-working.html)
-[Postgres CRUD](https://wdi-sg.github.io/gitbook-2019/04-databases/postgres/CRUD-postgres.html)
+[Relational SQL](https://wdi-sg.github.io/gitbook2020/04-databases/relational/relational.html)
+[Node Postgres Setup](https://wdi-sg.github.io/gitbook2020/04-databases/postgres/sql-working.html)
+[Postgres CRUD](https://wdi-sg.github.io/gitbook2020/04-databases/postgres/CRUD-postgres.html)
 
 ##### Assignment
 [Express tunr](https://github.com/wdi-sg/tunr_express)
@@ -381,9 +381,9 @@ code reading
 [CS - Basic Sorting Algo (half of ex)](https://my.generalassemb.ly/activities/778)
 
 ##### Topics
-[Express Cookies](https://wdi-sg.github.io/gitbook-2019/05-express/express-auth/cookies.html)
-[SQL M-M](https://wdi-sg.github.io/gitbook-2019/04-databases/relational/many-many.html)
-[SQL ERD](https://wdi-sg.github.io/gitbook-2019/04-databases/relational/erd.html)
+[Express Cookies](https://wdi-sg.github.io/gitbook2020/05-express/express-auth/cookies.html)
+[SQL M-M](https://wdi-sg.github.io/gitbook2020/04-databases/relational/many-many.html)
+[SQL ERD](https://wdi-sg.github.io/gitbook2020/04-databases/relational/erd.html)
 
 ##### Assignment
 [Express tunr part 2 ](https://github.com/wdi-sg/tunr_express/blob/master/part2.md)
@@ -394,8 +394,8 @@ code reading
 [CS - Basic Sorting Algo (half of ex)](https://my.generalassemb.ly/activities/778)
 
 ##### Topics
-[Express Password](https://wdi-sg.github.io/gitbook-2019/05-express/express-auth/password.html)
-[Pass Hashing](https://wdi-sg.github.io/gitbook-2019/05-express/express-auth/password2.html)
+[Express Password](https://wdi-sg.github.io/gitbook2020/05-express/express-auth/password.html)
+[Pass Hashing](https://wdi-sg.github.io/gitbook2020/05-express/express-auth/password2.html)
 
 ##### Assignment
 
@@ -406,7 +406,7 @@ code reading
 [CS - Divide and Conquer MERGE SORT(half)](https://my.generalassemb.ly/activities/882)
 
 ##### Topics
-[MVC](https://wdi-sg.github.io/gitbook-2019/05-express/express-mvc/readme.html)
+[MVC](https://wdi-sg.github.io/gitbook2020/05-express/express-mvc/readme.html)
 
 ##### Assignment
 [tweedr MVC](https://github.com/wdi-sg/mvc-tweedr)
@@ -422,9 +422,9 @@ code reading
 [CS - Divide and Conquer QUICK SORT(half)](https://my.generalassemb.ly/activities/882)
 
 ##### Topics
-[Express AJAX](https://wdi-sg.github.io/gitbook-2019/05-express/ajax.html)
-[EC2](https://wdi-sg.github.io/gitbook-2019/05-express/ec2-deploy.html)
-[Heroku](https://wdi-sg.github.io/gitbook-2019/05-express/node-deploy.html)
+[Express AJAX](https://wdi-sg.github.io/gitbook2020/05-express/ajax.html)
+[EC2](https://wdi-sg.github.io/gitbook2020/05-express/ec2-deploy.html)
+[Heroku](https://wdi-sg.github.io/gitbook2020/05-express/node-deploy.html)
 
 ##### Assignment
 
@@ -432,7 +432,7 @@ code reading
 
 # Unit 3
 
-[Ruby Install](https://wdi-sg.github.io/gitbook-2019/00-config-deployment/installfest/osx/install3.html)
+[Ruby Install](https://wdi-sg.github.io/gitbook2020/00-config-deployment/installfest/osx/install3.html)
 
 ### Week 1
 
@@ -442,14 +442,14 @@ code reading
 [CS - Distribution Sort ](https://my.generalassemb.ly/activities/802)
 
 ##### Topics
-[JS - Ruby Comparison](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/ruby-intro/ruby-js.html)
+[JS - Ruby Comparison](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/ruby-intro/ruby-js.html)
 [Ruby for beginners](http://ruby-for-beginners.rubymonstas.org/exercises.html)
 [--end here--](http://ruby-for-beginners.rubymonstas.org/exercises/truthiness.html)
-[Ruby Classes](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/ruby-classes/readme.html)
+[Ruby Classes](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/ruby-classes/readme.html)
 [Ruby for Begginers email class](http://ruby-for-beginners.rubymonstas.org/exercises/email.html)
-[Ruby OOP](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/ruby-classes/oop.html)
+[Ruby OOP](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/ruby-classes/oop.html)
 
-[JS OOP??? - redo ruby OOP??](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
+[JS OOP??? - redo ruby OOP??](https://wdi-sg.github.io/gitbook2020/02-js/js-oop/readme.html)
 
 
 ##### Assignment
@@ -461,7 +461,7 @@ code reading
 [CS - Search Algo - binary search iterative](https://my.generalassemb.ly/activities/633)
 
 ##### Topic
-[Rails Demo](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-intro/rails-demo.html)
+[Rails Demo](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/rails-intro/rails-demo.html)
 
 ##### Assignment
 [Instagram](https://github.com/wdi-sg/WDInstagram_rails)
@@ -476,10 +476,10 @@ code reading
 [CS - Search Algo - binary search recursive](https://my.generalassemb.ly/activities/633)
 
 ##### Topics
-[Rails 1-M](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/rails-1-M/readme.html)
-[Rails Active Record Review](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/readme.html)
+[Rails 1-M](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/active-record/rails-1-M/readme.html)
+[Rails Active Record Review](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/active-record/readme.html)
 
-[JS OOP???](https://wdi-sg.github.io/gitbook-2019/02-js/js-oop/readme.html)
+[JS OOP???](https://wdi-sg.github.io/gitbook2020/02-js/js-oop/readme.html)
 
 
 ##### Assignment
@@ -494,7 +494,7 @@ code reading
 [CS - Linked List](https://my.generalassemb.ly/activities/379)
 
 ##### Topics
-[Devise](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-security/devise.html)
+[Devise](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/rails-security/devise.html)
 
 ##### Assignment
 
@@ -506,7 +506,7 @@ code reading
 [CS - Stacks and Queues](https://my.generalassemb.ly/activities/803)
 
 ##### Topics
-[M-M](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/active-record/rails-M-M/readme.html)
+[M-M](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/active-record/rails-M-M/readme.html)
 
 
 
@@ -521,8 +521,8 @@ code reading
 [CS - Hash Tables 2 - reading only](https://my.generalassemb.ly/activities/761)
 
 ##### Topics
-[Security](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-security/readme.html)
-[Model Validations](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-validation/readme.html)
+[Security](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/rails-security/readme.html)
+[Model Validations](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/rails-validation/readme.html)
 
 #### Day 5
 
@@ -530,7 +530,7 @@ code reading
 [CS - Hash Tables 2 - coding](https://my.generalassemb.ly/activities/761)
 
 ##### Topics
-[Asset Pipeline](https://wdi-sg.github.io/gitbook-2019/06-ruby-rails/rails-assets-frontend/sass.html)
+[Asset Pipeline](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/rails-assets-frontend/sass.html)
 
 [Git Branches]()
 [Git Workflow]()
@@ -565,7 +565,7 @@ code reading
 ##### Topics
 [Intro to Webpack](10-react/webpack-intro/readme.md)
 [Intro to React](10-react/react-intro/intro.md)
-[React Component Review](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/components.html)
+[React Component Review](https://wdi-sg.github.io/gitbook2020/10-react/react-intro/components.html)
 
 ##### Assignment
 [React Tweet](https://github.com/wdi-sg/tweet-react)
@@ -589,8 +589,8 @@ code reading
 
 ##### Topics
 [react sass](10-react/react-intro/react-sass.md)
-[Lifting Functions](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/lifting.html)
-[ES6 destructure](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/es6-spread.html)
+[Lifting Functions](https://wdi-sg.github.io/gitbook2020/10-react/react-intro/lifting.html)
+[ES6 destructure](https://wdi-sg.github.io/gitbook2020/10-react/react-intro/es6-spread.html)
 
 ##### Assignment
 [todo part 2](https://github.com/wdi-sg/todo-react/blob/master/part2.md)
@@ -602,7 +602,7 @@ code reading
 ##### Morning Exercise
 
 ##### Topics
-[full stack react](https://wdi-sg.github.io/gitbook-2019/10-react/react-webpack/webpacker-fullstack.html)
+[full stack react](https://wdi-sg.github.io/gitbook2020/10-react/react-webpack/webpacker-fullstack.html)
 
 [webpacker]()
 
@@ -615,7 +615,7 @@ code reading
 
 ##### Topics
 
-[virtual DOM](https://wdi-sg.github.io/gitbook-2019/10-react/react-intro/state.html)
+[virtual DOM](https://wdi-sg.github.io/gitbook2020/10-react/react-intro/state.html)
 
 ##### Assignment
 
