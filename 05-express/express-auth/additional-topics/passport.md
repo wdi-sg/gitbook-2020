@@ -1,30 +1,30 @@
-## Passport Auth Setup
+# passport.js
 
 Passport is what's refered to as **express middleware**- a library that changes the way request and response are handled, and show up in your controllers.
 
 When we are done setting it up we will have some useful things in request and response to use when we are dealing with authentication.
 
-### Setup:
-We will be changing about 7 files in our app in order to enable passport.
-See the full set of changes here: [https://github.com/wdi-sg/express-reference/compare/sql-models...passport?expand=1](https://github.com/wdi-sg/express-reference/compare/sql-models...passport?expand=1)
+## Setup:
 
-#### yarn add
+We will be changing about 7 files in our app in order to enable passport. See the full set of changes here: [https://github.com/wdi-sg/express-reference/compare/sql-models...passport?expand=1](https://github.com/wdi-sg/express-reference/compare/sql-models...passport?expand=1)
 
-```
+### yarn add
+
+```text
 npm install add passport
 npm install add passport-local
 npm install add cookie-session
 ```
 
-### User Signup
+## User Signup
 
-#### index.js
+### index.js
 
 [https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/index.js](https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/index.js)
 
 We need to require and configure all the new libraries we'll be using.
 
-```js
+```javascript
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const expressSession = require('express-session');
@@ -33,7 +33,7 @@ const pgSessionStore = require('connect-pg-simple')(expressSession);
 
 After we initialize express we need this configuration:
 
-```js
+```javascript
 app.use(cookieParser('MySecret'));
 app.use(cookieSession({
   secret:'MySecret'
@@ -45,17 +45,17 @@ app.use(passport.session());
 
 Change routes to pass in a reference to passport
 
-```
+```text
 require('./routes')(app, db, passport);
 ```
 
-#### models/user.js
+### models/user.js
 
 [https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/models/user.js](https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/models/user.js)
 
 Make sure you have a method in your model that will get the user by name.
 
-```js
+```javascript
 const getByName = (name, callback) => {
   // set up query
   const queryString = 'SELECT * from users WHERE name=$1';
@@ -71,7 +71,7 @@ const getByName = (name, callback) => {
 
 Remember to add it to your exported object.
 
-```js
+```javascript
 return {
   getByName,
   create,
@@ -80,28 +80,27 @@ return {
 }
 ```
 
-Change the `create` method to return the full user (not just the id)
+Change the `create` method to return the full user \(not just the id\)
 
-```js
+```javascript
 const queryString = 'INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *';
 ```
 
-#### routes.js
+### routes.js
 
 [https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/routes.js](https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/routes.js)
 
 Now let's setup the passport route for signup / user creation
 
-Passport doesn't support this out of the box, so we need to name a new strategy for sign up.
-We are going to need this name again in the controller.
+Passport doesn't support this out of the box, so we need to name a new strategy for sign up. We are going to need this name again in the controller.
 
-```js
+```javascript
 let namedStrategy = 'local-signup';
 ```
 
-Configure the behavior of the signup when it's done processing (success and faliure)
+Configure the behavior of the signup when it's done processing \(success and faliure\)
 
-```js
+```javascript
 signupAuthConfig = {
   successRedirect : '/',
   failureRedirect : '/users/new'
@@ -110,22 +109,21 @@ signupAuthConfig = {
 
 Create passport's route callback by calling `passport.authenticate` and set it to the route
 
-```js
+```javascript
 let signupCallback = passport.authenticate(namedStrategy, signupAuthConfig)
 
 app.post('/users', signupCallback);
 ```
 
-#### controller/user.js
+### controller/user.js
 
 [https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js](https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js)
 
 Let's setup the controller now that we have set the routes file.
 
-Set the behavior of what happens when passport is done processing the incoming request
-This replaces what we think of as the route callback.
-All of the important signup params are explicitly passed in - we specify that in the object below.
-```
+Set the behavior of what happens when passport is done processing the incoming request This replaces what we think of as the route callback. All of the important signup params are explicitly passed in - we specify that in the object below.
+
+```text
 const signupVerifyCallback = (request, name, password, done) => {
 
   db.user.create(request.body, (error, queryResult) => {
@@ -142,29 +140,25 @@ const signupVerifyCallback = (request, name, password, done) => {
 ```
 
 When we are done with this callback, the passed in user will be put into the session.
-> session is a fancy cookie. We encrypt it with a secret and store it in a cookie.
-> the more secure version is to store the session on the server. See below on how to store the entire session in the database
+
+> session is a fancy cookie. We encrypt it with a secret and store it in a cookie. the more secure version is to store the session on the server. See below on how to store the entire session in the database
 
 We need to tell passport how to store things.
 
-
-
 [This line in the `index.js` file](https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js#L54) tells passport to use session to store the user so we can access it later.
 
+This line in the `index.js` config\(aobve\) tells express to use the session library and sets the secret.
 
-This line in the `index.js` config(aobve) tells express to use the session library and sets the secret.
-
-```js
+```javascript
 app.use(cookieParser('MySecret'));
 app.use(cookieSession({
   secret:'MySecret'
 }));
 ```
 
-Serialize will happen every time a user logs in or registers.
-We explicitly set each key of the object so that we don't accidentally include the user's hashed password from the DB. That would be insecure.
+Serialize will happen every time a user logs in or registers. We explicitly set each key of the object so that we don't accidentally include the user's hashed password from the DB. That would be insecure.
 
-```js
+```javascript
 passport.serializeUser((user, done) => {
 
   let serializedUser = {
@@ -179,7 +173,7 @@ passport.serializeUser((user, done) => {
 
 Deserialize will happen every time we get a request. The user will be deserialized into the request object.
 
-```js
+```javascript
 passport.deserializeUser((user, done) => {
   done(null, user);
 });
@@ -187,7 +181,7 @@ passport.deserializeUser((user, done) => {
 
 Set some configs for the fields to be passed in, as well as session settings.
 
-```
+```text
 const signupLocalStrategyConfig = {
 
     // by default, local strategy uses username and password, we could override with email
@@ -204,19 +198,19 @@ const signupLocalStrategyConfig = {
 
 Create the strategy and tell express / passport to use it.
 
-```
+```text
 const signupLocalStrategy = new LocalStrategy(signupLocalStrategyConfig, signupVerifyCallback);
 ```
 
 Give the same name for the signup strategy we defined in `routes.js`
 
-```js
+```javascript
 let namedStrategy = 'local-signup';
 
 passport.use(namedStrategy, signupLocalStrategy);
 ```
 
-#### index.js / root route
+### index.js / root route
 
 This is not neccessarily in root route but is wherever your root route is being rendered from.
 
@@ -230,16 +224,16 @@ In the root route let's make some changes so that we know we are logged in.
 
 > notice that if you have registered that `request.user` is the user we defined in `serializeUser` if you are not yet registered then it will be `undefined`.
 
-```js
+```javascript
 console.log("request user", request.user );
 ```
 
 We can add 2 new keys into the template:
 
-  1. the boolean for if the current requester is logged in / authenticated
-  1. the entire user in the request / session
+1. the boolean for if the current requester is logged in / authenticated
+2. the entire user in the request / session
 
-```js
+```javascript
 let context = {
   isAuthenticated: request.isAuthenticated(),
   user:request.user,
@@ -253,7 +247,7 @@ Make some changes to the root route template to display some stuff conditionally
 
 [https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/views/home.handlebars](https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/views/home.handlebars)
 
-```
+```text
 <div>
 {{#if isAuthenticated}}
   <form action="/users/logout" method="POST">
@@ -266,26 +260,25 @@ Make some changes to the root route template to display some stuff conditionally
 </div>
 ```
 
-### User Login
+## User Login
 
 Now we need to be able to log the user out and log them back in.
 
-#### controller/user.js - logout
+### controller/user.js - logout
 
-[https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js#L164](https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js#L164)
+[https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js\#L164](https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js#L164)
 
-Passport provides a logout method to response.
-Put that in your logout route.
+Passport provides a logout method to response. Put that in your logout route.
 
-```
+```text
 request.logout();
 ```
 
-#### routes.js - login
+### routes.js - login
 
 Set passport behavior at the routes level for when the authorization request succeeds / fails.
 
-```
+```text
 const localStrategyAuthConfig = {
   successRedirect: '/',
   failureRedirect: '/users/login',
@@ -294,29 +287,25 @@ const localStrategyAuthConfig = {
 };
 ```
 
-The local strategy is the default passport authorization strategy. We don't have to name it as carefully as the signup strategy.
-Call `passport.authenticate` to get the passport function that handles the express callback.
+The local strategy is the default passport authorization strategy. We don't have to name it as carefully as the signup strategy. Call `passport.authenticate` to get the passport function that handles the express callback.
 
-```
+```text
 let localStrategy = 'local';
 let loginCallback = passport.authenticate(localStrategy, localStrategyAuthConfig);
 app.post('/users/login', loginCallback);
 ```
 
-#### controller/user.js - login
+### controller/user.js - login
 
-[https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js#L75](https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js#L75)
+[https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js\#L75](https://github.com/wdi-sg/express-reference/blob/16522da0372f5125fe8508346792d4c217d620a6/controllers/user.js#L75)
 
-Set the behavior of passport after the user posts to the login route.
-`loginVerifyCallback` is called by passport after it recieves the request.
-When we are done call done and pass in the user we matched from the DB.
+Set the behavior of passport after the user posts to the login route. `loginVerifyCallback` is called by passport after it recieves the request. When we are done call done and pass in the user we matched from the DB.
 
 > That user will get serialized into the session.
 
-The behavior we specified in `routes.js` for login will happen after done.
-If the user successfully logged in and was verified the response header will have the session cookie.
+The behavior we specified in `routes.js` for login will happen after done. If the user successfully logged in and was verified the response header will have the session cookie.
 
-```js
+```javascript
 const loginVerifyCallback = (request, name, password, done) => {
   console.log( "about to make db login query", name, password );
 
@@ -347,7 +336,7 @@ const loginVerifyCallback = (request, name, password, done) => {
 
 Set the parameters to the login callback
 
-```
+```text
 const localStrategyLoginConfig = {
   passReqToCallback: true,
   usernameField: 'name',
@@ -357,11 +346,12 @@ const localStrategyLoginConfig = {
 
 Tell passport to use the callback.
 
-```
+```text
 const localStrategy = new LocalStrategy(localStrategyLoginConfig, loginVerifyCallback);
 passport.use(localStrategy);
 ```
 
-#### With postgres as the session store:
+### With postgres as the session store:
 
-https://github.com/wdi-sg/express-reference/compare/sql-models...ac7eb3acc1eaa2e3fbb4de2e76accf43fc0cd9ab?expand=1
+[https://github.com/wdi-sg/express-reference/compare/sql-models...ac7eb3acc1eaa2e3fbb4de2e76accf43fc0cd9ab?expand=1](https://github.com/wdi-sg/express-reference/compare/sql-models...ac7eb3acc1eaa2e3fbb4de2e76accf43fc0cd9ab?expand=1)
+

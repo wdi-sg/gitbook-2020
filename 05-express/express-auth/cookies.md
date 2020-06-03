@@ -1,10 +1,9 @@
-# Browser Cookies
+# Cookies
+
 ![https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif](https://media.giphy.com/media/EKUvB9uFnm2Xe/giphy.gif)
 
----
-
-
 ### Browser Side Persistence
+
 HTTP is a stateless protocol- we don't know anything about what the user has requested previously. How can we keep track of out users?
 
 Cookies.
@@ -13,51 +12,56 @@ A cookie is a piece if information we tell the computer to store on the browser.
 
 They come to the browser in the header of a response.
 
-They are (in theory) siloed by domain.
-
----
+They are \(in theory\) siloed by domain.
 
 #### Demo: Request and Response with Cookies
-Real-life recreation with paper. (One person pretends to be the backend)
-- Prepare a request in the browser. Determine which HTTP method / verbs we are using
-- Send the request to a server
-- server recieves the response
-- reads the headers
-- prepares the response
-- sets some cookies in the header
-- sends the response w/ headers
-- browser recieves the request
-- browser looks at the cookies set headers and stores those cookies as keys and values
-- every subsequent request to the domain, browser includes those cookies
+
+Real-life recreation with paper. \(One person pretends to be the backend\)
+
+* Prepare a request in the browser. Determine which HTTP method / verbs we are using
+* Send the request to a server
+* server recieves the response
+* reads the headers
+* prepares the response
+* sets some cookies in the header
+* sends the response w/ headers
+* browser recieves the request
+* browser looks at the cookies set headers and stores those cookies as keys and values
+* every subsequent request to the domain, browser includes those cookies
 
 ## express cookie implemenation
 
 Install and include the cookie parser library.
-```
+
+```text
 npm install cookie-parser
 ```
-```
+
+```text
 const cookieParser = require('cookie-parser')
 ```
 
 Set the configuration to tell express to use the cookie parser.
-```
+
+```text
 app.use(cookieParser());
 ```
 
 Inside a GET route set some cookies
-```
+
+```text
 let visits = 1;
 // set cookie
 response.cookie('visits', visits);
 ```
+
 See it work in the browser
 
----
-
 ### Set and change the cookies
+
 #### Implementation: How many times have you visited the site??
-```
+
+```text
 // get the currently set cookie
 var visits = request.cookies['visits'];
 
@@ -76,11 +80,9 @@ if( visits === undefined ){
 response.cookie('visits', visits);
 ```
 
----
-
 ### Pairing Exercise
 
-##### part 1
+**part 1**
 
 Open an incognito window.
 
@@ -104,20 +106,19 @@ Make a new request to that page.
 
 Look at your network tab- what cookies are in the request header, are cookies being set in the response header?
 
----
-
-##### part 2
+**part 2**
 
 Create a new express app. Add express cookie parser library to the express app.
 
-```
+```text
 mkdir cookies
 cd cookies
 touch index.js
 ```
 
 index.js
-```
+
+```text
 const express = require('express');
 const app = express();
 
@@ -130,18 +131,21 @@ app.listen(3000, () => console.log('~~~ Tuning in to the waves of port 3000 ~~~'
 ```
 
 Add the libraries
-```
+
+```text
 npm init
 npm install express cookie-parser
 ```
 
 Configure the library in express
-```
+
+```text
 const cookieParser = require('cookie-parser')
 ```
 
 Set the configuration to tell express to use the cookie parser.
-```
+
+```text
 app.use(cookieParser());
 ```
 
@@ -181,6 +185,5 @@ Show the user their name on every page.
 
 Add a database.
 
-Allow the user to "add records" to their "cart" in a cookie. (an array) - show the contents on the cart in another page.
-
+Allow the user to "add records" to their "cart" in a cookie. \(an array\) - show the contents on the cart in another page.
 

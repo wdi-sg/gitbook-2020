@@ -1,26 +1,28 @@
-## Routes
+# Routes
 
 We started by talking about the files for dealing with the DB.
 
 Now we need to talk about the part of the app that specifies the route matching.
 
-### index.js
+## index.js
 
 Require the db file
-```js
+
+```javascript
 const db = require('./db');
 ```
 
 Pass all of that stuff into routes
-```js
+
+```javascript
 require('./routes')(app, db);
 ```
 
-### routes.js
+## routes.js
 
 Pass the db from routes into the controllers so that we can use them
 
-```js
+```javascript
 module.exports = (app, db) => {
 
   const pokemons = require('./controllers/pokemon')(db);
@@ -33,3 +35,4 @@ module.exports = (app, db) => {
   app.get('/pokemons/:id', pokemons.get);
 };
 ```
+

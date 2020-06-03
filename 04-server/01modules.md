@@ -1,16 +1,17 @@
 # Node Modules
 
 ### Context
+
 We are now executing our code in a different context, one that no longer relies on `<script>` and `index.html`.
 
 If we want one set of javascript inside file A to interact with other javascript in file B, how do we accomplish that?
 
 The answer is modules.
 
-
 ### Objectives
-- Explain the use of modules
-- Code a module
+
+* Explain the use of modules
+* Code a module
 
 ## Node Modules
 
@@ -18,21 +19,19 @@ How do we include other javascript into our node.js programs? We are used to `sc
 
 If we wanted to have a second or third javascript file accessible to our original file, or CSS that adds or modifies our current CSS, we could just add it:
 
-
-```
+```text
 <script src="script2.js"></script>
 ```
 
-```
+```text
 <link rel="stylesheet" href="style2.css">
 ```
 
 **But** our javascript in no longer being executed in the context of a web page.
 
-
 Luckily node provides a way to use external libraries.
 
-```
+```text
 // the jquery library is actually all contained in the variable $
 var myOtherCode = require('script2.js');
 ```
@@ -46,7 +45,8 @@ In essence, if a file puts something inside of module.exports, it can be made av
 For example, let's make two files: `touch my-module.js main.js`
 
 `my-module.js`:
-```js
+
+```javascript
 // declare a variable in the file
 var number = 7;
 
@@ -67,12 +67,12 @@ module.exports.getNumber = function(){
 
 console.log("End of my-module.js file")
 ```
----
 
 #### Use the module you created
 
 `main.js`:
-```js
+
+```javascript
 // here we're grabbing everything that's "exported" in our other file, and storing it a variable called 'my'
 var my = require('./my-module')
 
@@ -88,32 +88,39 @@ console.log("The array contains " + my.arr.length + " elements")
 // Let's see the module we imported
 console.log(my)
 ```
+
 Then try running:
-```
+
+```text
 node my-module.js
 node main.js
 ```
 
 ### Pairing Exercise
+
 Run the above code.
 
 #### Further
-Write a set of calculator functions in a file called `calculator.js`. (add, subtract, multiply, divide)
+
+Write a set of calculator functions in a file called `calculator.js`. \(add, subtract, multiply, divide\)
 
 Export all the functions.
 
 In a new file `index.js` write a command line program that adds 2 + 2 using the functons defined in `calculator.js`.
 
 #### Further
+
 Make the command line program take arguments from the comand line.
 
 Ex:
+
 ```bash
 node index.js add 2 9
 ```
 
 #### Further
-Write a 3rd file, `circle.js`. This one `require`s `calculator.js` to calculate dimensions of a circle. (area, circumference, etc.)
+
+Write a 3rd file, `circle.js`. This one `require`s `calculator.js` to calculate dimensions of a circle. \(area, circumference, etc.\)
 
 Add to `index.js` to call the functions you wrote in `circle.js`.
 
@@ -124,3 +131,4 @@ node index.js circle area 7
 ```bash
 node index.js circumference 7
 ```
+

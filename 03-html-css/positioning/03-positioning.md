@@ -1,3 +1,5 @@
+# Positioning
+
 ## Positioning
 
 Another CSS property, "position", can take `relative` or `absolute` values, among others.
@@ -7,29 +9,28 @@ Position is another dimension of how an element gets displayed- generally you us
 More specifically you use it when you want to do something very specific with the position of an element.
 
 ### How to Position
-Setting a position other than `static` on an element means that you get to use more specific position attributes: `top`, `right`, `bottom` and `left` (it's always in that order)
+
+Setting a position other than `static` on an element means that you get to use more specific position attributes: `top`, `right`, `bottom` and `left` \(it's always in that order\)
 
 You can set these with:
-- px
-- em
-- rem
-- percent
 
----
+* px
+* em
+* rem
+* percent
 
 #### Relative Positioning
 
 Declaring `position:relative` allows you to position the element top, bottom, left, or right relative to where it would normally occur.
 
-This is mostly only used in combination with absolutely positioned elements.
----
-
+## This is mostly only used in combination with absolutely positioned elements.
 
 #### Absolute Positioning
 
 Specifying `position: absolute` _removes the element from the document flow_ and places it exactly where you tell it to be.
 
 Example: Modal:
+
 ```css
 .modal{
   position:absolute;
@@ -39,13 +40,11 @@ Example: Modal:
 }
 ```
 
-```html
+```markup
 <div class="modal">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus a nulla in efficitur. Fusce venenatis velit id leo sollicitudin pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas aliquet, velit ac tempor bibendum, mi arcu euismod diam, ut vestibulum leo augue vitae metus. Proin finibus dui sed aliquam varius. Integer quis massa urna. Fusce vitae lacus sed nunc tincidunt sagittis. Sed id ligula id lacus sodales vehicula in eget erat. Pellentesque condimentum massa nulla, sit amet ultrices mauris ornare a. Donec dolor elit, pretium sed nulla ac, sollicitudin fringilla nunc. Nunc tincidunt mollis purus sit amet sagittis.
 </div>
 ```
-
----
 
 #### Using Absolute + Relative Together
 
@@ -55,7 +54,7 @@ This is usually used for two things:
 
 1. In layout when you have fixed width cards, but you want your design to be mobile and desktop responsive, you change the number of cards within the row.
 
-*But* the position of all elements within the card stays the same.
+_But_ the position of all elements within the card stays the same.
 
 ```css
 .card{
@@ -79,7 +78,7 @@ This is usually used for two things:
 }
 ```
 
-```html
+```markup
 <div class="card">
   <img class="card-img" src="https://i.imgur.com/6yHmlwT.jpg"/>
   <p class="card-like">
@@ -92,13 +91,12 @@ This is usually used for two things:
 
 ![Imgur](https://i.imgur.com/I22mFsc.png)
 
----
-
 #### Fixed Positioning
 
-An element with fixed position is positioned relative to the browser window.  It will not move even if the window is scrolled, so a fixed positioned element will stay right where it is.
+An element with fixed position is positioned relative to the browser window. It will not move even if the window is scrolled, so a fixed positioned element will stay right where it is.
 
 Example: Nav Bar Layout:
+
 ```css
 .nav{
   z-index:1;
@@ -106,7 +104,7 @@ Example: Nav Bar Layout:
 }
 ```
 
-```html
+```markup
 <div class="nav">
   <div class="nav-button nav1">
     About
@@ -119,8 +117,6 @@ Example: Nav Bar Layout:
   </div>
 </div>
 ```
-
----
 
 #### Static Positioning
 
@@ -142,7 +138,7 @@ Explicitly sets an element to overlap on top of another, regardless of what orde
 
 A higher z-index means that element will appear on top on another element.
 
-```
+```text
 .gold-box {
   position: absolute;
   z-index: 3; /* put .gold-box above .green-box and .dashed-box */
@@ -160,7 +156,7 @@ A higher z-index means that element will appear on top on another element.
 }
 ```
 
-```
+```text
 <span class="gold-box">Gold box</span>
 <span class="green-box">Green box</span>
 ```
@@ -168,16 +164,22 @@ A higher z-index means that element will appear on top on another element.
 From: [https://developer.mozilla.org/en-US/docs/Web/CSS/z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
 
 ### Pairing Exercises
+
 Use the code you wrote for the display exercise.
 
-##### Position Relative
+**Position Relative**
+
 Use the chrome console to position an element relative. Set the top, bottom, left or right properties. Set them with pixels or also percentage.
 
-##### Position Relative w/ Absolute
+**Position Relative w/ Absolute**
+
 Run the above code for position relative / absolute.
 
-##### Position Fixed
+**Position Fixed**
+
 Using the chrome console, apply position fixed to an element.
 
-##### Further
+**Further**
+
 Open up generalassembly.com or any other page. Open the chrome dev tools. Try applying `display` `block` or `inline-block` to some elements. Try applying `position` `fixed` or `absolute`. Before you apply the style, try to predict how the page will change.
+

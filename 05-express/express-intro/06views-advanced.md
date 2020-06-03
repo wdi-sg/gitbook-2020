@@ -1,10 +1,12 @@
-# View Layouts
+# Layout Views
+
 Sometimes you want the same surrounding HTML for each template - for example your head or body tags don't change with each different page.
 
 First, pass the relevant props to a layout component.
 
 `views/layouts/default.jsx`:
-```js
+
+```javascript
 var React = require('react');
 
 class DefaultLayout extends React.Component {
@@ -26,7 +28,8 @@ We can use `this.props.children` to magically fill in things from our other file
 Then use that surrounding component inside your template.
 
 `views/index.jsx`:
-```js
+
+```javascript
 var React = require('react');
 var DefaultLayout = require('./layouts/default');
 
@@ -42,3 +45,4 @@ class HelloMessage extends React.Component {
 
 module.exports = HelloMessage;
 ```
+

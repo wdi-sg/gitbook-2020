@@ -1,4 +1,4 @@
-# Password
+# Login Cookies
 
 A password is some piece of knowledge that confirms the identity of a user.
 
@@ -10,7 +10,7 @@ The implementation of a password is simple- our app will store the user's passwo
 
 First we need to create a user table with a password column.
 
-```
+```text
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
     name TEXT,
@@ -20,16 +20,17 @@ CREATE TABLE IF NOT EXISTS users (
 
 Then we need an express app. This express app will allow users to create an account and set a password.
 
+## Register and Login
 
-### Register and Login
+## Logged In Cookies
 
-### Logged In Cookies
 We will ask the user to verify their identity once, at the begining of their session, and after that we can give them a cookie that will tell us they logged in at the beggining of their session.
 
 There are 2 situations that we will have verified the user- when they register and when the log in.
 
 In both cases, let's tell the broswer to store a logged in cookie.
 
-```
+```text
 response.cookie('loggedin', true);
 ```
+

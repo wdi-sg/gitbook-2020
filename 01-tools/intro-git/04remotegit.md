@@ -1,14 +1,10 @@
-#Remote Git Repo
+# Remote Git
 
 In the previous section, we worked with a local git repo. Now, let's try working with a remote repo, and clone it to create a local repo.
-
----
 
 ## Setup for this section
 
 * Create a new repo on Github
-
----
 
 ## Working with Remote Repositories
 
@@ -16,55 +12,45 @@ We previously mentioned that git is a **distributed version control system**. Me
 
 ![https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963](https://qph.fs.quoracdn.net/main-qimg-d151c0543baa145e6252c1ec95199963)
 
----
-
 ## `git clone` - clone a repository
 
 If you have your own repo on Github, you'll likely want to make changes on your local computer. In order to do this, you'll want to **clone** the repository, which creates a copy of a repo. The syntax will require the SSH URL.
 
-```
+```text
 git clone <SSH URL GOES HERE>
 ```
 
 Once this is done, you'll have a copy on your local machine. No need to run `git init` or anything, it's all done for you!
 
----
-
 ## `git pull` - pull changes from Github
 
 Now that you have a local copy of the repo, if any changes are made on Github, you can pull those changes down by running a pull command.
 
-```
+```text
 git pull
 ```
 
 Try making a change on Github using the built-in GUI and run this command! You'll see that the changes will be pulled down.
 
----
-
 ## `git push` - push changes to Github
 
 Similarly, if we make changes to our local copy of the repo, we can push those changes to Github by running a push command.
 
-```
+```text
 git push
 ```
 
 Try making a change locally, add your changes, and commit your changes. Run this command, and you'll see that the changes will be pushed to Github.
 
----
-
 ## `git remote` - how git knows your remotes
 
-How does `git pull` and `git push` work? Git uses a list of *remotes* to know where to push and pull from. You can view a list of these remotes by running the remote command:
+How does `git pull` and `git push` work? Git uses a list of _remotes_ to know where to push and pull from. You can view a list of these remotes by running the remote command:
 
-```
+```text
 git remote -v
 ```
 
 By default, cloning your Github repo will create remotes for pushing and pulling, via the SSH URL. We'll be using these in the future for more complex pushing and pulling.
-
----
 
 ## Forking - Github's way to share and collaborate
 
@@ -74,24 +60,25 @@ The solution is to create a **fork** of a repo. It's kinda like a clone, but it'
 
 Once you want to officially submit your changes, you'll perform what's called a **pull request**, which we'll demo before your first deliverable.
 
-
 ## Exercise
+
 Put your previously created local repo on github:
 
-- create the repo on github
-- set the `remote` - github is always `origin`
-- `git remote add origin <URL OF YOUR GITHUB REPO>`
-- push your changes up to github: `git push origin master`
-- refresh your github repo page to see your code up on github.com
+* create the repo on github
+* set the `remote` - github is always `origin`
+* `git remote add origin <URL OF YOUR GITHUB REPO>`
+* push your changes up to github: `git push origin master`
+* refresh your github repo page to see your code up on github.com
 
 ### Further
+
 Make new changes and put them up on github.
 
-- change the h2 to an h3
-- make the h3 a link that goes to the general assembly website.
-- change mango to durian.
+* change the h2 to an h3
+* make the h3 a link that goes to the general assembly website.
+* change mango to durian.
 
 Commit as above.
 
-Look at the visual record of your changes on github.com: <YOUR REPO URL>/commits
-Click on the commit id to see line-by-line changes.
+Look at the visual record of your changes on github.com: /commits Click on the commit id to see line-by-line changes.
+

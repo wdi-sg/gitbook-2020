@@ -1,48 +1,48 @@
-# Git recipes
+# Git Recipes
 
-These are the commands for common tasks. Git can be a bit hard to memorize, since there's quite a few commands,
-and what those commands aren't necessarily named what you'd expect them to be named. This is intended be be a place where you can look up a task, and find the git commands needed to perform it.
+These are the commands for common tasks. Git can be a bit hard to memorize, since there's quite a few commands, and what those commands aren't necessarily named what you'd expect them to be named. This is intended be be a place where you can look up a task, and find the git commands needed to perform it.
 
 ## Set the git editor to something easier to use than vim
 
 Append this to your .zshrc file:
 
-```
+```text
 export GIT_EDITOR=pico
 ```
 
 ## Initialize a git repository
 
-```
+```text
 git init
 ```
 
 ## Remove a git repository
 
-```
+```text
 rm -rf .git
 ```
 
 ## Unstage files
 
-```
+```text
 git reset (file)
 ```
 
 ## Add tracked files into the Staging Area
-```
+
+```text
 git add -u
 ```
 
 ## See the status of staged files
 
-```
+```text
 git status
 ```
 
 ## Commit all staged files
 
-```
+```text
 #git add -u #Always use it before `git commit` to put files into the Staging Area
 git commit  #Puts the Staged Files (from Staging Area) into the Commit Area
 ```
@@ -53,115 +53,115 @@ Committed changes get a bit harder to remove/revert. Be sure you're committing w
 
 ## See history of commits
 
-```
+```text
 git log
 ```
 
 ## Reverse a change
 
-Reversing a commit doesn't really undo it, it just creates another commit that changes the files you committed
-back to what they were before the commit. First, you have to find the ID of the commit you'd like to reverse using git log.
+Reversing a commit doesn't really undo it, it just creates another commit that changes the files you committed back to what they were before the commit. First, you have to find the ID of the commit you'd like to reverse using git log.
 
 Copy that ID, and paste it into this command
 
-```
+```text
 git revert (Commit ID)
 ```
 
 ## Destroy all changes up to a certain point
 
-It's possible to completely remove all records of changes back to a given commit. It's not a good idea
-to do this on a regular basis, but rarely, it becomes necessary.
+It's possible to completely remove all records of changes back to a given commit. It's not a good idea to do this on a regular basis, but rarely, it becomes necessary.
 
-```
+```text
 git reset (Commit ID) --hard
 ```
 
-If you try to push to a remote repository, the remote will just think you haven't received the latest commits,
-so you have to force the remote to rewrite it's own history
+If you try to push to a remote repository, the remote will just think you haven't received the latest commits, so you have to force the remote to rewrite it's own history
 
-```
+```text
 git push origin --force
 ```
 
 ## Create a branch
 
-```
+```text
 git checkout -b (branch name)
 ```
 
 ## Delete a branch
 
-```
+```text
 git branch -d (branch name)
 ```
 
 ## Merge a branch into master
 
-```
+```text
 git checkout master
 git merge (other branch name)
 ```
 
 ### NOTE:
 
-You can merge a branch into any other branch. Just check out the branch you want to merge into, then merge just like
-above.
+You can merge a branch into any other branch. Just check out the branch you want to merge into, then merge just like above.
 
-```
+```text
 git checkout (branch name)
 get merge (other branch name)
 ```
 
+## Cloning another repo
 
-## <a name="#quick-guide"></a>Cloning another repo
-
-1. On github.com, go to the repo which you'd like to clone (e.g. http://www.github.com/davified/js-functions)
-
+1. On github.com, go to the repo which you'd like to clone \(e.g. [http://www.github.com/davified/js-functions](http://www.github.com/davified/js-functions)\)
 2. Fork the repo by clicking on the 'Fork' button on the top right corner of the page
+3. In your terminal, `cd` to a folder where you want to keep this repo \(e.g. Desktop/coding/week-1\), and run
 
-3. In your terminal, `cd` to a folder where you want to keep this repo (e.g. Desktop/coding/week-1), and run
-```
-git clone http://www.github.com/YOUR_GITHUB_USERNAME/js-functions
-```
+   ```text
+   git clone http://www.github.com/YOUR_GITHUB_USERNAME/js-functions
+   ```
+
 4. You'll now have the repo running on your local machine! Awesome! After making changes to the files, run the following commands to commit and push your changes to github:
-```
-git add -A
-git commit
-git push -u origin master
-```
+
+   ```text
+   git add -A
+   git commit
+   git push -u origin master
+   ```
+
 5. Your code is now on your repo on github!
 
 ## Creating your own repo
 
 1. On github.com, create a new repo by clicking on the `+` button on the top right corner of the page.
+2. \[Skip this step if you've already created your folder, html file\(s\) and js file\(s\)\] If you haven't, you can create your folder and files for your program:
 
-2. [Skip this step if you've already created your folder, html file(s) and js file(s)] If you haven't, you can create your folder and files for your program:
-```
-mkdir my-awesome-repo
-cd my-awesome-repo
-touch index.html style.css script.js
-```
+   ```text
+   mkdir my-awesome-repo
+   cd my-awesome-repo
+   touch index.html style.css script.js
+   ```
 
 3. In the terminal, `cd` to the folder which you want to push to github, and run:
-```
-git init
-git remote add origin YOUR_GITHUB_REPO_URL
-```
+
+   ```text
+   git init
+   git remote add origin YOUR_GITHUB_REPO_URL
+   ```
 
 4. Your local repo is now linked to your github repo. To push your code to github, run the message commands as before:
-```
-git add -A
-git commit
-git push -u origin master
-```
-5. Done! Remember to run step 4 (add, commit, push) regularly!
+
+   ```text
+   git add -A
+   git commit
+   git push -u origin master
+   ```
+
+5. Done! Remember to run step 4 \(add, commit, push\) regularly!
 
 ## Set remote origin
 
 Having a repository on your computer is great, but what if other people want to contribute? Github is like a social network for git. It allows many people to work on the same repository and make commits. You have to link your local repository to Github in order to enable all this.
 
-```
+```text
 git remote add origin (Add Github URL here)
 ```
 
@@ -169,13 +169,13 @@ git remote add origin (Add Github URL here)
 
 Did we add the remote correctly? Let's find out!
 
-```
+```text
 git remote -v
 ```
 
 ## Push to remote
 
-```
+```text
 git push (remote name) (optional branch name)
 ```
 
@@ -183,7 +183,7 @@ git push (remote name) (optional branch name)
 
 It's generally a good idea to specify which branch you're pushing. You may have a lot of local branches that your collaborators don't care about. Also, it takes more time to push every branch you may have, so usually I use
 
-```
+```text
 git push origin master
 ```
 
@@ -191,7 +191,7 @@ in order to push only to the master branch.
 
 ## Pull from remote
 
-```
+```text
 git pull (remote name) (optional branch name)
 ```
 
@@ -199,12 +199,13 @@ git pull (remote name) (optional branch name)
 
 If you do push a branch to a remote, you can delete it like this:
 
-```
+```text
 git push origin :(branch name)
 ```
 
-It's important to include the semicolon. If I had a branch named "my_branch", I would delete it from the remote like this:
+It's important to include the semicolon. If I had a branch named "my\_branch", I would delete it from the remote like this:
 
-```
+```text
 git push origin :my_branch
 ```
+

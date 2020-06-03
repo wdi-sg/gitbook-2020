@@ -1,16 +1,15 @@
-# Update / Delete
+# Update and Delete
 
 We aren't adding any new concepts when we add the rest of CRUD / rest of the HTTP verbs, but the process of each verb has many steps that must be completed by the server and client.
 
-### Updating
-* (Assume user has already created something that is stored as data )
+## Updating
+
+* \(Assume user has already created something that is stored as data \)
 * User requests the form to edit that thing
-
 * Using RESTful style routes that would be `/pokemon/1/edit`
-
 * That requested form already has each piece of data for that record pre-filled in the form:
 
-```js
+```javascript
 '<form method="POST" action="/pokemon/'+pokemon.id+'?_method=put">'+
   '<div class="pokemon-attribute">'+
     'id: <input name="id" type="text" value="'+pokemon.id+'"/>'+
@@ -19,32 +18,31 @@ We aren't adding any new concepts when we add the rest of CRUD / rest of the HTT
 '</form>';
 ```
 
-```js
+```javascript
 app.put("/pokemon/:id", (request, response) => {
   //read the file in and write out to it
 });
 ```
 
-### Deleting
-* (Assume user has already created something that is stored as data )
+## Deleting
+
+* \(Assume user has already created something that is stored as data \)
 * User requests or already has the form to delete that thing
 
-```js
+```javascript
 '<form method="POST" action="/pokemon/'+pokemon.id+'?_method=delete">'+
     '<input name="id" type="hidden" value="'+pokemon.id+'"/>'+
     '<input type="submit" value="delete this"/>'+
 '</form>';
 ```
 
-```js
+```javascript
 app.delete("/pokemon/:id", (request, response) => {
   //read the file in and write out to it
 });
 ```
 
----
-
-### MethodOverride
+## MethodOverride
 
 HTML `<form>`s do no yet support PUT and DELETE requests, so we need a way to circumvent the problem.
 
@@ -54,7 +52,7 @@ You will need to install the method-override package using `npm install method-o
 
 **index.js**
 
-```js
+```javascript
 // Set up method-override for PUT and DELETE forms
 const methodOverride = require('method-override')
 app.use(methodOverride('_method'));
@@ -64,7 +62,7 @@ Then, in your HTML page, you will have to specify `_method=<VERB>`, where VERB c
 
 **edit**
 
-```html
+```markup
 '<form method="POST" action="/'+pokemon.id+'?_method=put">'+
   '<div class="pokemon-attribute">'+
     'id: <input name="id" type="text" value="'+pokemon.id+'"/>'+
@@ -74,13 +72,13 @@ Then, in your HTML page, you will have to specify `_method=<VERB>`, where VERB c
 
 For more examples and details, as usual, read the [method-override documentation](https://www.npmjs.com/package/method-override).
 
-
-### Pairing Exercise
+## Pairing Exercise
 
 Run the following code:
 
 Create and respond to a PUT request:
-```
+
+```text
 mkdir updat
 cd updat
 npm init
@@ -91,17 +89,17 @@ touch index.js
 
 Add the method override config code:
 
-(it goes after you declare the app variable)
+\(it goes after you declare the app variable\)
 
-```js
+```javascript
 // Set up method-override for PUT and DELETE forms
 const methodOverride = require('method-override')
 app.use(methodOverride('_method'));
 ```
 
 Add the get route form that creates the request:
-```js
 
+```javascript
 app.get('/editsomething',(request, response) => {
 
   let html = '<form method="POST" action="/putrequest?_method=put">'+
@@ -114,7 +112,8 @@ app.get('/editsomething',(request, response) => {
 ```
 
 Add the put method route to your app:
-```js
+
+```javascript
 app.put("/putrequest", (request, response) => {
   console.log(request.body);
   //read the file in and write out to it
@@ -122,15 +121,18 @@ app.put("/putrequest", (request, response) => {
 });
 ```
 
-##### PUT with CURL
-Use a CURL command to make a POST request to your server. (remember PUT is interpreted in express!)
+#### PUT with CURL
 
-(We can use CURL to create the request, without having to construct anything else)
-```
+Use a CURL command to make a POST request to your server. \(remember PUT is interpreted in express!\)
+
+\(We can use CURL to create the request, without having to construct anything else\)
+
+```text
 curl -d "monkey=banana&koala=eucalyptus" -X POST http://localhost:3000/putrequest?_method=put
 ```
 
-#### Further
+### Further
+
 Add in some pretend data to edit:
 
 1. install and use `jsonfile` npm library
@@ -138,9 +140,11 @@ Add in some pretend data to edit:
 3. render this data in your form
 4. use a put request to change the data stored in the json file
 
-#### Further
+### Further
+
 Make your pretend data more complicated:
-```
+
+```text
 {
   "names" : [
     "susan",
@@ -156,10 +160,11 @@ Make your pretend data more complicated:
 4. Change the action of the form to be specific to this particular name: `<form action="/names/0" ....`
 5. Change the put request route to handle the editing of a particular element of the names array.
 
-#### Further
+### Further
+
 Change the names array to contain an array of objects, instead of an array of strings.
 
-```
+```text
 {
   "names" : [
     {
@@ -171,3 +176,4 @@ Change the names array to contain an array of objects, instead of an array of st
   ]
 }
 ```
+

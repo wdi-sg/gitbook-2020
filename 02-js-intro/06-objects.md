@@ -4,11 +4,11 @@ Complex data definitions
 
 We want to be able to encapsulate data definitions that are more complicated than a single value.
 
-### Object Syntax
+## Object Syntax
 
 Objects are useful because we can specify/name the keys to represent the data we want to hold.
 
-```js
+```javascript
 var person = {
   name: 'Chee Kean',
   weight: 231,
@@ -16,17 +16,17 @@ var person = {
 };
 ```
 
-Thus we are most likely saying that a second person will contain the same types of data, (the same keys) but with different values (a different name)
+Thus we are most likely saying that a second person will contain the same types of data, \(the same keys\) but with different values \(a different name\)
 
-#### Creating
+### Creating
 
-```js
+```javascript
 var friend = {firstName: "Jane", lastName: "Doe"}
 ```
 
-#### Accessing
+### Accessing
 
-```js
+```javascript
 friend.firstName
 friend.lastName
 
@@ -34,19 +34,20 @@ friend['firstName']
 friend['lastName']
 ```
 
-```js
+```javascript
 var myKey = 'firstName';
 friend[myKey]
 
 // friend.myKey *will not* work
 ```
-Objects represent another "secondary" kind of data- an object, with its myriad kinds of data inside can itself represent one data point (a friend for example).
 
+Objects represent another "secondary" kind of data- an object, with its myriad kinds of data inside can itself represent one data point \(a friend for example\).
 
-### More complicated structures
+## More complicated structures
+
 Objects can be inside of other objects. This will be determined by the structure of data you want.
 
-```
+```text
 var employee = {
   name : "Chee Kean",
   wages : {
@@ -69,33 +70,31 @@ employee["contact"]["phone"]
 // Chee Keans house unit
 employee["contact"]["address"]["unit"]
 ```
-### Objects as Input Data
 
-```js
+## Objects as Input Data
+
+```javascript
 var totalShapeSurface = function( shape1Height, shape1Width, shape1Depth, shape2Height, shape2Width, shape2Depth ){
   var totalHeight = shape1Height + shape2Height;
   // ... calculate other stuff
 };
 ```
 
-```js
+```javascript
 totalShapeSurface( 12, 34, 12, 46, 67, 66 );
 ```
 
 Or:
 
-
-```js
+```javascript
 var totalShapeSurface = function(shape1, shape2){
 
   var totalHeight = shape1.height + shape2.height;
   // ... calculate other stuff
 };
-
 ```
 
-```js
-
+```javascript
 var shape1 = {
   height:12,
   width:30,
@@ -104,32 +103,39 @@ var shape1 = {
 
 totalShapeSurface( shape1, shape2 );
 ```
-### pairing exercise
+
+## pairing exercise
+
 Run the above examples.
 
 What other kinds of data would be well represented by an object? List them.
 
-### further
+## further
+
 Write the lines of code to access each piece of data about the employee.
 
-### further
+## further
+
 Change the wage example to take an object instead:
 
 Each employee makes a different wage per hour.
 
-```
+```text
 var employeePay = {
   wage: 15,
   hours: 40
 };
 ```
+
 Use this object as the input value to calculate the monthly salary.
 
-### further
+## further
+
 Use the employee object above to calculate their monthly wage.
 
-### further
-```
+## further
+
+```text
 var employeePayScales = {
   junior : {
     basePay : 15,
@@ -164,16 +170,16 @@ var employee = {
 
 Use these two objects to calculate Chee Kean's pay.
 
-### further
+## further
+
 Copy and paste the object below into your code.
 
 `console.log` the following:
 
-- product image id
+* product image id
+* tweet user friends count
 
-- tweet user friends count
-
-```
+```text
 var product = {
   "product": {
     "id": 632910392,

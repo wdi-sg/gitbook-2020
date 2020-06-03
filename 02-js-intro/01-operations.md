@@ -1,33 +1,30 @@
-# data operations
+# Operations
+
 The most basic computation is an operation. These happen between 2 pieces of data and then you get another piece of data out.
 
-Javascript defines certain specific *types* of data and the kinds of operations you can do on it.
+Javascript defines certain specific _types_ of data and the kinds of operations you can do on it.
 
 #### Types of data:
-- numbers
-- booleans
-- strings
 
-##### operations on numbers
+* numbers
+* booleans
+* strings
+
+**operations on numbers**
+
 Numbers are: 1,2,3,45.6, -6.7 etc.
 
-```
+```text
 + - * /
 ```
 
-```
+```text
 2 + 2
 ```
 
-Like normal math, Javascript follows the traditional order of operations: P.E.M.D.A.S. or "Please Excuse My Dear Aunt Sally." Mathematical operations are executed in the following order...
-  1. Parenthetical expressions
-  2. Exponentiation
-  3. Multiplication
-  4. Division
-  5. Addition
-  6. Subtraction
+Like normal math, Javascript follows the traditional order of operations: P.E.M.D.A.S. or "Please Excuse My Dear Aunt Sally." Mathematical operations are executed in the following order... 1. Parenthetical expressions 2. Exponentiation 3. Multiplication 4. Division 5. Addition 6. Subtraction
 
-```js
+```javascript
 (4 + 2) * (12 / 3)
 // => 6 * 4
 // => 24
@@ -37,31 +34,33 @@ Like normal math, Javascript follows the traditional order of operations: P.E.M.
 // => 5
 ```
 
-##### operations on booleans
+**operations on booleans**
+
 A boolean is `true` or `false`
 
-```
+```text
 var userCreated = true;
 ```
 
 A boolean operation produces a **new** boolean value.
 
-```
+```text
 true === true // results in a new boolean value: true
 ```
 
-##### operations on strings
+**operations on strings**
 
-```
+```text
 +
 ```
 
-```
+```text
 "hello" + "world"
 ```
+
 You can't, however, use other math operators on strings...
 
-```js
+```javascript
 "hamburger" - "ham"
 // => NaN
 
@@ -69,25 +68,25 @@ You can't, however, use other math operators on strings...
 // => NaN
 ```
 
-### NaN ("Not a number")
+### NaN \("Not a number"\)
 
 A special number...that's not a number?
 
-```js
+```javascript
 typeof NaN
 // => Number
 ```
 
-You usually get `NaN` when the result of a math operation is not real (e.g., dividing 0 by 0, multiplying strings together).
+You usually get `NaN` when the result of a math operation is not real \(e.g., dividing 0 by 0, multiplying strings together\).
 
-```js
+```javascript
 0/0
 // => NaN
 ```
 
 #### Non-Values
-`null` is a value that indicates the lack of a meaningful value. There are no operations you can do *to* a `null` value.
 
+`null` is a value that indicates the lack of a meaningful value. There are no operations you can do _to_ a `null` value.
 
 #### Variables
 
@@ -103,7 +102,7 @@ we can use that variable as a stand-in for the original value:
 console.log(phrase);
 ```
 
-**phrase** can be anything we want (with some syntactical caveats), **sentence** for example, whatever makes semantic sense.
+**phrase** can be anything we want \(with some syntactical caveats\), **sentence** for example, whatever makes semantic sense.
 
 ```javascript
 var phrase = 'In my room is a chair and a table';
@@ -124,23 +123,23 @@ console.log(sum);
 console.log(sum);
 ```
 
->x4 => "In my room is a chair and a table"
+> x4 =&gt; "In my room is a chair and a table"
+>
+> x4 =&gt; 100
 
->x4 => 100
+**Variable names**
 
-##### Variable names
+* cannot begin with a number or include special character
+* camelCase
+  * `thisVariable` NOT `this_variable`
+* case sensitive
+  * `thisVariable` is not the same as `ThisVariable`
 
-- cannot begin with a number or include special character
-- camelCase
-	- `thisVariable` NOT `this_variable`
-- case sensitive
-	- `thisVariable` is not the same as `ThisVariable`
+**Semicolons**
 
-##### Semicolons
+* The interpreter needs the semicolons.  **DO NOT FORGET THEM!**
 
-- The interpreter needs the semicolons.  **DO NOT FORGET THEM!**
-
-##### Variable re-assignment
+**Variable re-assignment**
 
 ```javascript
 var item = 'chair';
@@ -150,28 +149,29 @@ item = 'eclair';
 console.log(item);
 ```
 
-> => "eclair"
+> =&gt; "eclair"
 
 #### Variables as Data
 
-The *purpose* of a variable is:
+The _purpose_ of a variable is:
 
-###### to represent it's **literal** value in a name that defines what it means.
-###### contain dynamic data that changes but always represents the same thing. ex. `var temperatureToday = 34;`
+**to represent it's literal value in a name that defines what it means.**
+
+**contain dynamic data that changes but always represents the same thing. ex. var temperatureToday = 34;**
 
 Naming a variable for what it represents is a very hard problem.
 
-###### One of your main tasks as a programmer is to come up with the most accurate, succinct name possible.
+**One of your main tasks as a programmer is to come up with the most accurate, succinct name possible.**
 
 #### Operations on variables
 
-```
+```text
 var number = 3;
 var square = number * number;
 var cube = square *  number;
 ```
 
-```
+```text
 var distance = 100;
 var startTime = 0;
 var endTime = 100;
@@ -179,7 +179,7 @@ var totalTime = endTime = startTime;
 var speed = distance / totalTime;
 ```
 
-```
+```text
 var pi = 3.14;
 var radius = 3;
 var area = pi * radius * radius;
@@ -198,7 +198,8 @@ Create a new js file: `touch error.js`
 Link them together in your HTML file: `<script src="error.js"></script>`
 
 Put this example in:
-```
+
+```text
 console.log('hello world);
 ```
 
@@ -213,27 +214,29 @@ You have to learn to sort the 'wheat from the chaff' so to speak. This will come
 Errors are a **growth opportunity**. When you receive an error, yes it is an obstacle, but with a little patience it will turn you into a more informed, better developer.
 
 ### pairing exercises
+
 Open the chrome console.
 
 Try the examples above. Combine the operators and see what values you get.
 
 #### further
 
-##### % (Modulus)
+**% \(Modulus\)**
 
 The modulus operator - `%` - returns the remainder of a division operation.
 
-```js
+```javascript
 12 % 5
 // => 2, which is the remainder of 12 / 5
 ```
 
-Modulus has a pretty handy use case: to check if a number is even. We can do this by running `NUMBER % 2`. If a number is even, the result should be 0 (i.e., there should be no remainder).
+Modulus has a pretty handy use case: to check if a number is even. We can do this by running `NUMBER % 2`. If a number is even, the result should be 0 \(i.e., there should be no remainder\).
 
-```js
+```javascript
 4 % 2
 // => 0, because 4 is even
 
 5 % 2
 // => , because 5 is odd. When 5 is divided by 2, the remainder is 1.
 ```
+

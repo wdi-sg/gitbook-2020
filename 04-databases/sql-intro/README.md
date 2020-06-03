@@ -1,0 +1,21 @@
+# SQL Language
+
+SQL is both a language and a system for storing and retrieving data.
+
+SQL is based on `TABLE`s of information. These are basically spreadsheets.
+
+These tables have individual records inside them called _rows_.
+
+A collection of tables makes a database.
+
+```text
+ id |     name    |   weight
+----+-------------+-----------
+ 1  | Chee Kean   |   7
+ 2  | Susan Chan  |   9
+ 3  | Steven      |   6
+ 4  | Josh        |   2
+```
+
+SQL Language is designed to be able to _query_, or ask for any kind or combination or order of data in a set of tables.
+

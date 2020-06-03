@@ -1,4 +1,4 @@
-# React Components
+# Layout Components
 
 We rendered some HTML with react, now we will see one of the main concepts of React, the Component Class.
 
@@ -8,36 +8,29 @@ React does this at the base level, but we can also sub-divide each part of a pag
 
 These are the sepearate logical pieces of any page.
 
-
 ![https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png](https://github.com/wdi-sg/react-intro/raw/master/images/templates-page.png)
-
 
 ![https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png](https://github.com/wdi-sg/react-intro/blob/master/images/components-page.png?raw=true)
 
-
 ![https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png](https://github.com/wdi-sg/react-intro/blob/master/images/wireframe.png?raw=true)
 
-
-![https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png](https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true)
-
-
+![https://github.com/wdi-sg/react-intro/blob/master/images/wireframe\_deconstructed.png](https://github.com/wdi-sg/react-intro/blob/master/images/wireframe_deconstructed.png?raw=true)
 
 ### Properties of Components
-- separation of concerns
-- nested / pass data down from parent
-- F focused
-- I independant
-- R resuable
-- S small
-- T testable
 
-
+* separation of concerns
+* nested / pass data down from parent
+* F focused
+* I independant
+* R resuable
+* S small
+* T testable
 
 ## Writing a component
 
 Begin with `home.jsx` view file:
 
-```
+```text
 var React = require('react');
 
 class Home extends React.Component {
@@ -61,7 +54,7 @@ module.exports = Home;
 
 We'll replace the `ul` with a component that represents the list:
 
-```
+```text
 class List extends React.Component {
     render() {
         return (
@@ -77,7 +70,7 @@ class List extends React.Component {
 
 Now put it in place of the `ul` tag:
 
-```
+```text
 return (
   <div>
     <h1>Hello, { this.props.name }!</h1>
@@ -87,19 +80,20 @@ return (
 ```
 
 ### Props - Component Properties
+
 In react, a component takes data in and renders itself based on that data.
 
 The data is passed from above in the parent component and becomes `this.props`
 
 Let's pass one piece of data to the `List` component.
 
-```
+```text
 <List title="my list"/>
 ```
 
 Use it inside the component:
 
-```
+```text
 class List extends React.Component {
     render() {
         return (
@@ -116,7 +110,7 @@ class List extends React.Component {
 
 #### props variables and data
 
-```
+```text
 let titleVariable = "wow title";
 
 return (
@@ -130,7 +124,8 @@ return (
 Let's start rendering a real list from data coming from outside the list itself.
 
 Specify the list like this:
-```
+
+```text
 const listOfItems = [
   "apples",
   "bananas",
@@ -140,12 +135,13 @@ const listOfItems = [
 
 Pass it into `List`:
 
-```
+```text
 <List title="my list" items={listOfItems}/>
 ```
 
 Use it in the component:
-```
+
+```text
 class List extends React.Component {
 
     render() {
@@ -163,12 +159,13 @@ class List extends React.Component {
 }
 ```
 
-
 ### Nesting Components
+
 We mentioned that it's the nested structure of components using components that really makes react special.
 
 Let's put our `<li>` tag data in it's own component.
-```
+
+```text
 class ListItem extends React.Component {
 
     render() {
@@ -196,7 +193,8 @@ class List extends React.Component {
 ### Separate Files with require
 
 **views/components/header.jsx**
-```
+
+```text
 var React = require('react');
 
 class Header extends React.Component {
@@ -213,7 +211,8 @@ module.exports = Header;
 ```
 
 **views/hello-message.jsx**
-```
+
+```text
 var React = require('react');
 var Header = require('./components/header');
 
@@ -229,7 +228,6 @@ class HelloMessage extends React.Component {
 module.exports = HelloMessage;
 ```
 
-
 ### Exercise
 
 Use components with one of your apps.
@@ -240,7 +238,7 @@ Create a new jsx file:
 touch views/papaya.jsx
 ```
 
-```html
+```markup
 var React = require('react');
 class Papaya extends React.Component {
   render() {
@@ -262,8 +260,7 @@ class Papaya extends React.Component {
 module.exports = Papaya;
 ```
 
-
-```
+```text
 Paste a new route into an express app:
 ```js
 app.get('/papaya', (request, response) => {
@@ -278,14 +275,15 @@ app.get('/papaya', (request, response) => {
 
 #### Import some practice data
 
-```
+```text
 touch google.json
 ```
 
 Paste the google shopping object into the json file: [https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json](https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json)
 
 Make sure it worked ok, put this in your app.get:
-```
+
+```text
 jsonfile.readFile('google.json', (err, obj) => {
   console.log("OBJ ITEM ID~~: "+ obj.items[0].id );
   // put render here
@@ -294,7 +292,7 @@ jsonfile.readFile('google.json', (err, obj) => {
 
 Render a list of items with a separate `GoogleItem` component.
 
-```
+```text
 render() {
     let itemsElements = this.props.googleItems.map( (item, index) => {
                           return <GoogleItem item={item}/>;
@@ -310,3 +308,4 @@ render() {
 #### Further
 
 Inside the `GoogleItem` component create separate components for keys like: `product`, `inventory`, `author`, etc.
+

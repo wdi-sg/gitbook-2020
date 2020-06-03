@@ -1,12 +1,12 @@
-## Loops
+# Loops
 
-#### `while`
+### `while`
 
 A **while loop** repeatedly executes a code block as long as a specified condition is true.
 
 Some condition inside the code block will change, making the condition true.
 
-```js
+```javascript
 var i = 0;
 while (i < 5) {
   console.log("i is " + i);
@@ -21,17 +21,15 @@ while (i < 5) {
 // >i is 4
 ```
 
----
-
 **The parts of a while loop**
 
-```
+```text
 while (CONDITION) {
   //CODE
 }
 ```
 
-```
+```text
 var i=0;
 
 while (i < 5) {
@@ -42,16 +40,15 @@ while (i < 5) {
 }
 ```
 
----
-
 Loop that runs forever
-```
+
+```text
 while(true){
   //CODE
 }
 ```
 
-### Backwards Loops
+## Backwards Loops
 
 It's totally possible to run the loop backwards. We need to do three things:
 
@@ -59,7 +56,7 @@ It's totally possible to run the loop backwards. We need to do three things:
 2. Change the test condition to run the for loop while `i > 0`
 3. Change the step instruction to `i--`
 
-```
+```text
 var i=9;
 
 while (i > 0) {
@@ -70,16 +67,17 @@ while (i > 0) {
 }
 ```
 
-### Exercise: Run some loops (10 mins)
+## Exercise: Run some loops \(10 mins\)
 
-- Setup Your Files (html / script)
-- Copy the above code examples
-- Change the value of i to something bigger
-- Change the condition from *less than* to *less than or equal to* - what happens?
-- Change the starting value of i to something else. What happens?
-- Make a while loop that runs 1000 times and console.logs out `i`.
-- Make a while loop that runs 1000 times and console.logs out `hello`
-- Make a backwards loop
-- Make a loop that increments more than one (counting forwards and backwards) 
-- Make a loop that runs a random amount of times (up to a reasonable number) - just google how to create a random integer in javascript if you don't know how.
-- Crash your chrome browser tab by running a while loop that console.logs something and goes on forever.
+* Setup Your Files \(html / script\)
+* Copy the above code examples
+* Change the value of i to something bigger
+* Change the condition from _less than_ to _less than or equal to_ - what happens?
+* Change the starting value of i to something else. What happens?
+* Make a while loop that runs 1000 times and console.logs out `i`.
+* Make a while loop that runs 1000 times and console.logs out `hello`
+* Make a backwards loop
+* Make a loop that increments more than one \(counting forwards and backwards\) 
+* Make a loop that runs a random amount of times \(up to a reasonable number\) - just google how to create a random integer in javascript if you don't know how.
+* Crash your chrome browser tab by running a while loop that console.logs something and goes on forever.
+

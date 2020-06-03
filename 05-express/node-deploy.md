@@ -1,7 +1,8 @@
-# Heroku Deployment with Node
+# Deploy - Heroku
 
 ## Objectives
-* Understand the purpose of Heroku as a Platform as a Service (PaaS)
+
+* Understand the purpose of Heroku as a Platform as a Service \(PaaS\)
 * Identify other methods of deployment, and their benefits and drawbacks
 * Take a working Node app and deploy it to a server
 * Make changes to an existing deployment
@@ -25,29 +26,28 @@ However, we'd have to buy and look after this computer, have somewhere to store 
 
 #### Use a Cloud Computing Platform
 
-We could also use Amazon Web Services or similar cloud services, which provide the servers needed to host applications via the cloud. While many companies use AWS for deployment (such as Netflix), we are expected to not only deploy our system, but also set up the system architecture for our application. This includes logging in to the remote server, setting up the web server, and managing configuration and databases. While this provides a lot of flexibility for larger applications, there's a large learning curve that leans towards Linux system administration. Luckily, there is an even better way.
+We could also use Amazon Web Services or similar cloud services, which provide the servers needed to host applications via the cloud. While many companies use AWS for deployment \(such as Netflix\), we are expected to not only deploy our system, but also set up the system architecture for our application. This includes logging in to the remote server, setting up the web server, and managing configuration and databases. While this provides a lot of flexibility for larger applications, there's a large learning curve that leans towards Linux system administration. Luckily, there is an even better way.
 
 #### Abstracting Cloud Computing
 
-Heroku is a cloud-based, Platform as a Service (PaaS). Essentially it's a group of virtual machines that run on Amazon Web Services (EC2) and hosts your application code in the cloud. By using git, you can deploy your code directly to Heroku's machines - they call them "dynos" - and seconds later your changes will be live in production.
+Heroku is a cloud-based, Platform as a Service \(PaaS\). Essentially it's a group of virtual machines that run on Amazon Web Services \(EC2\) and hosts your application code in the cloud. By using git, you can deploy your code directly to Heroku's machines - they call them "dynos" - and seconds later your changes will be live in production.
 
 To deploy an app to Heroku, it's a fairly straightforward step-by-step process.
 
 First you need to link your machine to your Heroku account - a similar process to what we did with Github.
 
-
 ## Before Deploying
-1. Make sure you have an account with heroku: https://www.heroku.com/
 
+1. Make sure you have an account with heroku: [https://www.heroku.com/](https://www.heroku.com/)
 2. Make sure you have installed the heroku toolbelt - [https://toolbelt.heroku.com/](https://toolbelt.heroku.com/)
 
-###Install Heroku Toolbelt
+### Install Heroku Toolbelt
 
 This is a command-line tool that allows us to use commands in the terminal, similar to the way that we use git.
 
 Once it is installed, you need to login with your heroku credentials:
 
-```
+```text
 heroku login
 Enter your Heroku credentials.
 Email: adam@example.com
@@ -60,29 +60,32 @@ We'll have the ability to create free applications using Heroku, but with limita
 ## Deploy
 
 ### package.json
-Your package.json file is **crucial** - when you deploy your application, Heroku will check the package.json file for all dependencies so whenever you install anything with npm make sure to use `--save`. You can always check your package.json by deleting your node_modules folder and running npm install, this will only install the dependencies listed in the file, so if you application no longer runs, then you know you're missing something.
+
+Your package.json file is **crucial** - when you deploy your application, Heroku will check the package.json file for all dependencies so whenever you install anything with npm make sure to use `--save`. You can always check your package.json by deleting your node\_modules folder and running npm install, this will only install the dependencies listed in the file, so if you application no longer runs, then you know you're missing something.
 
 Once we deploy our application to Heroku, it will automatically install our dependencies by running npm install. It will then start our application, but how does it know what script to start? The easiest option, is to ensure that we have a _start script_ in our `package.json`. Heroku can then simply run `npm start` to start our application.
 
-```json
+```javascript
   "scripts": {
     "start": "node index.js"
   },
 ```
 
 It is also best practice to include the version on node you are using. You can do this in a section called engines, for example:
-```json
+
+```javascript
   "engines" : {
     "node" : "^6.6.0"
   },
 ```
 
 ### Environment Variables
+
 Environment variables are values that exist in a computer's current environment. They can affect how a computer runs, or how certain commands are executed. Frequently, we'll have variables that are unique to a particular computer. An example is the PORT variable. When we deploy to Heroku, it will automatically allocate us a PORT and our application must listen on that port.
 
 So in your `index.js` file, where you get your server started, include the port number in your app.listen function. Example:
 
-```js
+```javascript
 const PORT = process.env.PORT || 3000;
 
 const server = app.listen(PORT, () => console.log('~~~ Tuning in to the waves of port '+PORT+' ~~~'));
@@ -91,40 +94,42 @@ const server = app.listen(PORT, () => console.log('~~~ Tuning in to the waves of
 Variables should also be used to avoid committing values that are sensitive, for example API keys or database URLs, these are cases where we DO NOT WANT TO COMMIT THE VALUES. These values can vary, but if a malicious user gets ahold of them, they can cause disastrous results, especially if the values access an account that costs money or resources.
 
 ### Git Based Deploy
+
 Before you create your app in Heroku, be sure your project is being tracked via a git repository
 
 Next create a Heroku app via the command line
 
-```
+```text
 heroku create
 ```
 
 Where `sitename` is the name of your app. This will create a url like: `http://sitename.herokuapp.com`
 
-__Add, and Commit all your data to git__ (you may want to push to Github too).
+**Add, and Commit all your data to git** \(you may want to push to Github too\).
 
-Then push it to Heroku (it's just another git remote afterall), enter the following command
+Then push it to Heroku \(it's just another git remote afterall\), enter the following command
 
-```
+```text
 git push heroku master
 ```
 
-In terminal after you deploy your app, type in `heroku ps:scale web=1`. This will ensure you have at least one dyno(process) running
-
+In terminal after you deploy your app, type in `heroku ps:scale web=1`. This will ensure you have at least one dyno\(process\) running
 
 ### Heroku Environment variables
+
 In your javascript code, you might have something like `process.env.GOOGLE_KEY`.
 
 In order to add environment variables to Heroku, you run a command to set it per item in our .env file. For example...
 
-```
+```text
 heroku config:set S3_KEY=8N029N81 S3_SECRET=9s83109d3+583493190
 ```
 
 You can also do this via the Heroku Dashboard for you App.
 
 ### Heroku Postgresql
-The database you are running is just another server running on computer. We are connecting to it from your nodejs server through the network. (That's why it has an address and port.)
+
+The database you are running is just another server running on computer. We are connecting to it from your nodejs server through the network. \(That's why it has an address and port.\)
 
 On Heroku, each of these servers has its own address, contained in an enviroment variable.
 
@@ -132,9 +137,9 @@ First, we need to add it to our app in the heroku dashboard. Heroku calls these 
 
 Now we need to tell our app where the db server is.
 
-To properly set the configs, we need to follow the instructions set out in the node postgres connection pool library page:
-[https://github.com/brianc/node-pg-pool](https://github.com/brianc/node-pg-pool)
-```
+To properly set the configs, we need to follow the instructions set out in the node postgres connection pool library page: [https://github.com/brianc/node-pg-pool](https://github.com/brianc/node-pg-pool)
+
+```text
 // inside of db.js
 
 //require the url library
@@ -145,7 +150,7 @@ const url = require('url');
 if( process.env.DATABASE_URL ){
 
   //we need to take apart the url so we can set the appropriate configs
-  
+
   const params = url.parse(process.env.DATABASE_URL);
   const auth = params.auth.split(':');
 
@@ -172,30 +177,34 @@ if( process.env.DATABASE_URL ){
 
 //this is the same
 const pool = new pg.Pool(configs);
+```
 
-```
 #### Working with your cloud Postgres DB
+
 **To play with psql for your running db:**
-```
+
+```text
 heroku pg:psql
 ```
 
 **To run a tables.sql file on the heroku db**
-```
+
+```text
 heroku pg:psql < tables.sql
 ```
+
 Checkout heroku's postgres documentation: [https://devcenter.heroku.com/articles/heroku-postgresql](https://devcenter.heroku.com/articles/heroku-postgresql)
 
-**Download a copy of your db in the cloud and put it into your local DB:**
-[https://devcenter.heroku.com/articles/heroku-postgres-import-export](https://devcenter.heroku.com/articles/heroku-postgres-import-export)
+**Download a copy of your db in the cloud and put it into your local DB:** [https://devcenter.heroku.com/articles/heroku-postgres-import-export](https://devcenter.heroku.com/articles/heroku-postgres-import-export)
 
 ### Don't forget to commit & push
+
 Anytime you make changes you need to remember to git add, git commit and git push to heroku.
 
-
 ## Review
+
 * App deployment
-  * Login to Heroku using the Heroku toolbelt (only do once)
+  * Login to Heroku using the Heroku toolbelt \(only do once\)
   * Create a Procfile and fetch your port in your app
   * Create a Heroku app
   * Push application to Heroku
@@ -203,19 +212,20 @@ Anytime you make changes you need to remember to git add, git commit and git pus
   * Install Heroku's postgres addon
   * Change the config variables and add a conditional for localhost
 
-
 #### Pairing Exercise
+
 You can start with this copy of the sql model express app to convert it to a Heroku-ready app: [https://github.com/wdi-sg/heroku-node-example](https://github.com/wdi-sg/heroku-node-example)
 
 ## Resources
 
 For all resources Heroku-related, check out the documentation on Heroku's website.
 
-https://devcenter.heroku.com/articles/getting-started-with-nodejs
+[https://devcenter.heroku.com/articles/getting-started-with-nodejs](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
 
-Some interesting (and free) addons you can add to your app:
+Some interesting \(and free\) addons you can add to your app:
 
 * [sendgrid](https://elements.heroku.com/addons/sendgrid)
   * Email
 * [Cloudinary](https://elements.heroku.com/addons/cloudinary)
   * API for image uploads and delivery
+

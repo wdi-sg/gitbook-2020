@@ -1,16 +1,18 @@
-# how to design and write programs
+# Program Design
 
 In the first iteration of how to write a program we'll take the building blocks of `operations` and `functions` to translate a problem statement into a function we can give input to.
 
 ## kinds of programs
 
 #### batch processing
+
 Are given one set of input when they are run.
 
 Give output when they are done.
 
 Examples:
-```
+
+```text
 Google web crawler / search indexer
 Movie special effects / pixar movies
 Many CLI / Unix commands
@@ -19,34 +21,35 @@ AIs like siri and alexa
 ```
 
 #### interactive
+
 Most programs you think of are interactive. They do different things depending on what the user does.
 
 ## additional data types:
+
 In order to build programs that represent the real world like the problem statements above, we must have more tools than simply naming variables and assigning them numbers or strings.
 
-We can be explicit about using `numbers`, `booleans` and `strings` to represent the data our programs capture and process. RThe simplest way to do this is by *naming*.
+We can be explicit about using `numbers`, `booleans` and `strings` to represent the data our programs capture and process. RThe simplest way to do this is by _naming_.
 
-Once we are explicit about these things we can design our programs to deal with these underlying basic types while representing our data clearly. Simply by naming the data represented in our programs (variables, functions and parameters ) we are describing the kind of data these represent.
-
+Once we are explicit about these things we can design our programs to deal with these underlying basic types while representing our data clearly. Simply by naming the data represented in our programs \(variables, functions and parameters \) we are describing the kind of data these represent.
 
 ### state data reperesentation
 
-Temperature could be a number type, but *represents* a temperature.
+Temperature could be a number type, but _represents_ a temperature.
 
-What kind of operations are suggested by this *TYPE* of data?
+What kind of operations are suggested by this _TYPE_ of data?
 
-```
+```text
 var temperature = 34;
 ```
 
-- conversion from one standard to another
-- operations to see if the temperature is boiling or freezing
-- if this is the temperature of a human, to se if the human is healthy
-- if this is the temperature of a material, determine it's properties at the current temperature (ice, liquid, metal, nuclear reactor)
+* conversion from one standard to another
+* operations to see if the temperature is boiling or freezing
+* if this is the temperature of a human, to se if the human is healthy
+* if this is the temperature of a material, determine it's properties at the current temperature \(ice, liquid, metal, nuclear reactor\)
 
 Use a conditional to determine which state produces which data.
 
-```
+```text
 if( feeling === "ok" ){
   return "me too!";
 }else if( feeling === "terrible" ){
@@ -60,17 +63,17 @@ Altitude could be a number type, but represents a height relative to the earth's
 
 What kind of operations are suggested by this kind of data?
 
-- human breathable range
-- locations inside the earth / earth's core / geoological locations
-- sea conditions / submarine conditions
-- flight conditions
-- space flight conditions
+* human breathable range
+* locations inside the earth / earth's core / geoological locations
+* sea conditions / submarine conditions
+* flight conditions
+* space flight conditions
 
 Use a conditional to determine what data is produced from which range.
 
-Example:
-A program that recommends outdoor sports clothing.
-```
+Example: A program that recommends outdoor sports clothing.
+
+```text
 if( temperature < 0 ){
   return "below freezing! we suggest 2 layers";
 }else if(temperature >= 0 && temperature < 10 ){
@@ -81,35 +84,39 @@ if( temperature < 0 ){
 ```
 
 ## data outside these 2 types:
+
 `null` is the representation of non-value in js. we can use this native type as a value that represents the non-value of data for either state data or range data.
 
 Example:
 
 A game of tic tac toe. How do you represent what's happened to a single square on the board?
-```
+
+```text
 var square1 = null;
 // the game starts with each square being unmarked - neither X or O.
 ```
 
-Note that this `null` type *is not* the same as the IDEA of a non-data data.
+Note that this `null` type _is not_ the same as the IDEA of a non-data data.
 
 ## other data
 
 #### global constants
+
 Sometimes we want to define data in a variable that will never change.
 
 Use all caps for those variable names.
 
-```
+```text
 var PI = 3.1415;
 ```
 
 #### global world state
+
 Especially in a game there can be dynamic values that represent exactly what is being shown to the user.
 
 If it's dynamic, we can assign the default value to it at the top of the program.
 
-```
+```text
 var clicks = 0;
 ```
 
@@ -127,48 +134,46 @@ Today, we'll add a new step, the `function template`.
 
 When we have more complicated functions that contain other control structures or data, we need a way to keep track of what we want to compute.
 
-
- `1.` Function Purpose
-An english description of what the entire function is for:
+`1.` Function Purpose An english description of what the entire function is for:
 
 To calculate the monthly wage of a worker given a rate and the hours worked.
 
- `2.` Input Data Description
+`2.` Input Data Description
 
 In english, describe what data your function deals with.
 
 Name the parameters after what data they represent.
 
-```
+```text
 hourlyRate - the rate earned per hour
 hoursWorked - number of hours worked
 ```
 
- `3.` Data Examples
+`3.` Data Examples
 
 Write actual examples for the input data.
 
 You should think about a range of examples. What are the possible input values? Give examples.
 
-```
+```text
 var hoursWorked = 5;
 ```
 
- `4.` Function Signature
+`4.` Function Signature
 
-Describe the *javascript* language data types your function deals with.
-```
+Describe the _javascript_ language data types your function deals with.
+
+```text
 hourlyRate (number), hoursWorked (number) --> monthlyWage (number)
 ```
 
 ## new step
 
-`5.` Function Template / Pseudo code
-Write the conditionals you might need into the body of the function.
+`5.` Function Template / Pseudo code Write the conditionals you might need into the body of the function.
 
 Use a short hand to stand in for what you want:
 
-```
+```text
 if hoursWorked more than 40
 
   // take off the amount that represents the amount over 40 hours:
@@ -187,24 +192,19 @@ if hoursWorked more than 40
   pay = pay + overtime pay
 ```
 
-<hr/>
-
-`6.` Code
-Make it work.
+`6.` Code Make it work.
 
 `7.` Functional Examples
-```
+
+```text
 var monthlyWage = calculateWage( 15, 40 ); // will equal 600
 ```
 
-`8.` Test
-Run the examples yourself.
+`8.` Test Run the examples yourself.
 
-`9.` Review & Refactor
-If your code is sloppy or could be changed to be more abstract, make those changes. Have you repeated yourself? Is there a way to make your code more clear? Easier to read?
+`9.` Review & Refactor If your code is sloppy or could be changed to be more abstract, make those changes. Have you repeated yourself? Is there a way to make your code more clear? Easier to read?
 
-```
-
+```text
 /*
  * hoursWorked - number of hours worked
  *
@@ -249,9 +249,11 @@ var calculateWage = function(hoursWorked){
 ```
 
 ### pairing exercise
+
 Implement the wage calculation example with overtime like in the example above.
 
 ### further
+
 Create a program that adds numbers together.
 
 Use a global world value to keep track of the running total of numbers added.
@@ -259,16 +261,20 @@ Use a global world value to keep track of the running total of numbers added.
 When the user enters in a number in the input, add that number to the total.
 
 ### further
+
 Add the ability to do other operations to the current number.
 
-When the user types in "multiply", "subtract" or "divide" and hits enter, the *next* number entered uses that operation on the number entered and the running total.
+When the user types in "multiply", "subtract" or "divide" and hits enter, the _next_ number entered uses that operation on the number entered and the running total.
 
 Use a global world value to keep track of which operation the user selected.
 
 ### further
+
 Add features to the calculator.
 
 Add the ability to calculate the volume of a rectangular shape. Add the command to tell the calculator to do this.
 
 ### further
+
 Add the ability to calculate the volume of a pyramid.
+

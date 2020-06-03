@@ -1,10 +1,12 @@
-# React Views With Data
+# Views 2
 
 ### Conditional Rendering
+
 Sometimes we want to decide to render something based on a variable.
 
 We can put this code directly above the return statement, or we could also write it in another function.
-```
+
+```text
 var React = require('react');
 
 class Home extends React.Component {
@@ -29,12 +31,14 @@ module.exports = Home;
 ```
 
 ### Map
+
 The ES6 array method `map` allows us to return an array.
 
 We can use `map` to create HTML in a loop.
 
 Say we have the following `context` given to our `jsx` template.
-```js
+
+```javascript
 var context = {
   people: [
     "Yehuda Katz",
@@ -44,7 +48,7 @@ var context = {
 }
 ```
 
-```
+```text
 var React = require('react');
 
 class Home extends React.Component {
@@ -68,26 +72,27 @@ class Home extends React.Component {
 module.exports = Home;
 ```
 
-
 ### HTML Attributes
 
 HTML attributes in react are written without the quotes by default:
 
-```
+```text
 <img src={pokemon.img} />
 ```
 
 If you need to do string interpolation, create another variable:
-```
+
+```text
 let formAction = '/pokemon/' + pokemon.id;
 ```
 
-```
+```text
 <form action={formAction}>
 ```
 
 CSS class names are set with `className` instead of `class`
-```
+
+```text
 <p className="banana">yes</p>
 ```
 
@@ -95,7 +100,7 @@ CSS class names are set with `className` instead of `class`
 
 #### Create your app
 
-```
+```text
 mkdir react-views2
 cd react-views2
 npm init
@@ -108,14 +113,15 @@ touch views/home.jsx
 
 #### Import some practice data
 
-```
+```text
 touch google.json
 ```
 
 Paste the google shopping object into the json file: [https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json](https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json)
 
 Make sure it worked ok, put this in your app.get:
-```
+
+```text
 jsonfile.readFile('google.json', (err, obj) => {
   console.log("OBJ ITEM ID~~: "+ obj.items[0].id );
   // put render here
@@ -130,10 +136,11 @@ Implement an express route `/first` - it creates an HTML page with the first use
 
 This template should display at least 2 data fields for this item.
 
-##### Conditionals
+**Conditionals**
+
 Display the tax of the stock availablity:
 
-```
+```text
 <p>Tax: {tax}</p>
 ```
 
@@ -150,10 +157,10 @@ Use the `map` syntax above to render the list.
 This template should display the title for each item.
 
 #### Render More Data
+
 Display the title, description and the inventory stock availability.
 
 #### further
+
 Render the rest of the data in the object.
-
-
 

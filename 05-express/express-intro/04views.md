@@ -1,15 +1,14 @@
-# Views and Templates
+# Views
 
 We cannot keep using `response.send` to send a response. Ultimately, we'll want to send HTML files back to the client.
 
 We want to have this page's HTML be different for each request. How do we do this??
 
-
 ## Templating with React
 
-If we want to customize what's on the page? We're going to set up a template engine with **[React](http://reactjs.org)** and use that instead.
+If we want to customize what's on the page? We're going to set up a template engine with [**React**](http://reactjs.org) and use that instead.
 
-React is used on the front end of lots of sites, but it's __JSX__ component can also be used to simply create HTML.
+React is used on the front end of lots of sites, but it's **JSX** component can also be used to simply create HTML.
 
 #### Note: the server-side react is not the same as browser-side react. Be careful when googling. If a resouce makes reference to DOM or browser events then it is discussing browser react, and may or may not be helpful.
 
@@ -17,7 +16,7 @@ We need to do a couple steps to get the template engine working:
 
 First, install [`express-react-views`](https://github.com/reactjs/express-react-views)
 
-````
+```text
 npm install express-react-views react react-dom
 ```
 
@@ -25,7 +24,7 @@ Then, prepare this directory structure on your `node` project:
 
 Run these two commands: `mkdir views` `touch views/home.jsx` to create this structure:
 
-```
+```text
 .
 ├── app.js
 └── views
@@ -33,8 +32,6 @@ Run these two commands: `mkdir views` `touch views/home.jsx` to create this stru
 
 1 directories, 2 files
 ```
-
-
 
 Once structure is setup, you can setup the `express` view engine to `jsx` in this manner.
 
@@ -59,13 +56,13 @@ app.get('/', (req, res) => {
 })
 ```
 
-
 ### JSX
 
 JSX is javascript and HTML.
 
 Start by using it to simply render an HTML page.
-```
+
+```text
 var React = require('react');
 
 class Home extends React.Component {
@@ -95,7 +92,7 @@ Templating with variables means we can pass in an object to the `.render` functi
 
 **index.js**
 
-```js
+```javascript
 const express = require('express')
 const app = express();
 
@@ -122,7 +119,8 @@ app.listen(3000);
 then we need to update our `home.jsx` to use a templating variable.
 
 **views/home.jsx**
-```html
+
+```markup
 var React = require('react');
 class Home extends React.Component {
   render() {
@@ -143,14 +141,13 @@ module.exports = Home;
 
 The JavaScript being embedded is enclosed by the `{ }` tags.
 
-
 ## Pairing Exercise:
 
 Start from scratch.
 
 ### Create your app
 
-```
+```text
 mkdir react-v
 cd react-v
 npm init
@@ -163,7 +160,7 @@ touch views/home.jsx
 
 Follow the examples above to get some HTML to render.
 
-Use `this.props` to render some dynamic data in the HTML. (the `Sterling Archer` example)
+Use `this.props` to render some dynamic data in the HTML. \(the `Sterling Archer` example\)
 
 Change the name value in the object to see the changes: `{name: "Sterling Archer"}` to `{name: "Susan Chan"}`
 
@@ -175,14 +172,15 @@ Output the name as well as the weight.
 
 #### Import some practice data
 
-```
+```text
 touch google.json
 ```
 
 Paste the google shopping object into the json file: [https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json](https://raw.githubusercontent.com/wdi-sg/gitbook-2019/master/05-express/express-intro/views-data.json)
 
 Make sure it worked ok, put this in your app.get:
-```
+
+```text
 jsonfile.readFile('google.json', (err, obj) => {
   console.log("OBJ ITEM ID~~: "+ obj.items[0].id );
   // put render here
@@ -198,14 +196,14 @@ Implement an express route `/first` - it creates an HTML page with the first pro
 This template should display at least 2 data fields for this item.
 
 #### further
-Implement a route with params:  `/items/:id`
+
+Implement a route with params: `/items/:id`
 
 Use `:id` to get the user according to it's index in the array
 
 #### further
+
 Change your code so that the param will be used to get the item by it's `googleId`.
 
-For example: (127.0.0.1/items/11180453840663864493)[127.0.0.1/items/11180453840663864493]
-
-
+For example: \(127.0.0.1/items/11180453840663864493\)\[127.0.0.1/items/11180453840663864493\]
 

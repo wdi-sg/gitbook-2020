@@ -1,26 +1,30 @@
-# CSS ANIMATIONS
+# Animation
 
 ## CSS Transitions
-CSS Transitions are settings on an element that tell the browser how to animate *into* another state.
+
+CSS Transitions are settings on an element that tell the browser how to animate _into_ another state.
 
 #### Example:
 
 Element in it's natural state
-```
+
+```text
 .box{
   background-color:red;
 }
 ```
 
 Element in it's new state
-```
+
+```text
 .box:hover{
   background-color:green
 }
 ```
 
-Add a CSS transition in order to say how the element should transition out of it's *CURRENT* state into another.
-```
+Add a CSS transition in order to say how the element should transition out of it's _CURRENT_ state into another.
+
+```text
 .box{
   background-color:red;
   transition: all 0.5s ease-out 1s;
@@ -30,15 +34,18 @@ Add a CSS transition in order to say how the element should transition out of it
 ### Transitions Syntax
 
 Similar to `border` transitions are normally set in a shorthand.
-```
+
+```text
 /*          property name | duration | timing function | delay */
 
 transition: all             0.5s       ease-out          1s;
 ```
 
 #### transition properties
+
 You can set which css properties this transition applies to
-```
+
+```text
 .box{
   background-color:red;
   transition: background-color 0.5s ease-out 1s;
@@ -46,36 +53,40 @@ You can set which css properties this transition applies to
 ```
 
 #### transition timing function
+
 You can change the speed function of the transition.
 
-The main ones are keyword values, although you are able to set number values as well.
-Transition timing named values:
-- ease
-- ease-in
-- ease-out
-- ease-in-out
-- linear
-- step-start
-- step-end
+The main ones are keyword values, although you are able to set number values as well. Transition timing named values:
+
+* ease
+* ease-in
+* ease-out
+* ease-in-out
+* linear
+* step-start
+* step-end
 
 #### Resources
-[https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
 
+[https://developer.mozilla.org/en-US/docs/Web/CSS/CSS\_Transitions/Using\_CSS\_transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
 
 ## CSS Animation Keyframes
+
 If your animation is more than just a transition from one state to another, you can use CSS `keyframe`s to specify intermediate states.
 
 All of the above attributes still apply.
 
-*Example:*
-As a box moves from one side of the screen to the next, it will dip and come back up.
-```
+_Example:_ As a box moves from one side of the screen to the next, it will dip and come back up.
+
+```text
 <div class="box">
   hello
 </div>
 ```
+
 Generic styles for a box
-```
+
+```text
 div{
   height:100px;
   width:100px;
@@ -83,8 +94,10 @@ div{
   position:absolute;
 }
 ```
+
 Set the animation style properties for this box
-```
+
+```text
 .box{
   animation-duration: 3s;
   animation-name: slider;
@@ -92,10 +105,12 @@ Set the animation style properties for this box
   animation-iteration-count: infinite;
 }
 ```
+
 If we wanted the box to move from left to right, we could have just used a transition.
 
 If we want it to dip we can add a `50%` keyframe that specifies a `top` property that will happen in the middle of the transition / animation.
-```
+
+```text
 @keyframes slider {
   0% {
     right:calc(100% - 100px);
@@ -114,7 +129,10 @@ If we want it to dip we can add a `50%` keyframe that specifies a `top` property
 ```
 
 #### animation-name
+
 Name your animation using `animation-name`, then refer to it in an `@keyframes` declaration.
 
 #### Resources
-[https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+
+[https://developer.mozilla.org/en-US/docs/Web/CSS/CSS\_Animations/Using\_CSS\_animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+

@@ -1,8 +1,8 @@
-## Full Stack
+# Full Stack
 
 Create an express app:
 
-```
+```text
 mkdir express-fulls
 cd express-fulls
 mkdir views
@@ -13,9 +13,9 @@ touch index.js
 touch views/hello.jsx
 ```
 
-
 index.js
-```
+
+```text
 console.log("about to require express");
 const express = require('express');
 
@@ -45,7 +45,8 @@ console.log("done listening");
 ```
 
 hello.jsx
-```
+
+```text
 var React = require('react');
 
 class Hello extends React.Component {
@@ -66,57 +67,61 @@ class Hello extends React.Component {
 module.exports = Hello;
 ```
 
-
-#### Run the app
+### Run the app
 
 [http://127.0.0.1:3000/hello](http://127.0.0.1:3000/hello)
 
-#### Create some javascript that runs in the browser
+### Create some javascript that runs in the browser
 
 Allow express to serve static files from the `public` directory.
 
 index.js
-```
+
+```text
 app.use(express.static('public'))
 ```
 
-```shell
+```text
 mkdir public
 ```
 
 Make a js file:
-```
+
+```text
 cd public
 touch script.js
 ```
 
 script.js
-```
+
+```text
 console.log('chicken');
 console.log("we are in the browser");
 ```
 
-##### Change hello.jsx
-```html
+#### Change hello.jsx
+
+```markup
 <script src="/script.js"></script>
 ```
 
-#### pairing exercise
+### pairing exercise
 
-### Request from different perspectives:
+## Request from different perspectives:
+
 What does the request look like:
-  - leaving the browser, in the network tab of chrome
-  - directly from the terminal
-  - from outside your computer
 
-##### Open the chrome dev tools
+* leaving the browser, in the network tab of chrome
+* directly from the terminal
+* from outside your computer
 
-##### Run the app
+#### Open the chrome dev tools
+
+#### Run the app
 
 [http://127.0.0.1:3000/hello](http://127.0.0.1:3000/hello)
 
-
-##### run curl
+#### run curl
 
 On the terminal:
 
@@ -124,48 +129,49 @@ On the terminal:
 curl 127.0.0.1:3000/hello
 ```
 
-##### request from another computer
+#### request from another computer
 
 On the terminal, find your pair's IP address:
+
 ```bash
 ifconfig
 ```
 
 Use that to make a request to their server, e.g.:
 
-```
+```text
 curl 143.21.2.1:3000/hello
 ```
 
-#### WHERE DOES THIS RUN??
+### WHERE DOES THIS RUN??
 
-Note that is is *very* important to understand the order and context of the execution of all of this code.
+Note that is is _very_ important to understand the order and context of the execution of all of this code.
 
 Make sure that you can answer all of these questions.
 
-- Where and when does the `waffles` `console.log` above happen?
-- Where and when does the `sushi` `console.log` above happen?
-- Where and when does the `chicken` `console.log` above happen?
-- Where do you look for each `console.log` and why?
-- What happens if you `console.log` `window` instead of `waffles`?
-- What happens if you `console.log` `process` instead of `waffles`?
-- What happens if you `console.log` `window` instead of `chicken`?
-- What happens if you `console.log` `process` instead of `chicken`?
-- How does the `script.js` file get from the `public` folder to the browser?
-- When does it get there?
-- Find all of the relevant requests in the chrome dev tools network tab.
+* Where and when does the `waffles` `console.log` above happen?
+* Where and when does the `sushi` `console.log` above happen?
+* Where and when does the `chicken` `console.log` above happen?
+* Where do you look for each `console.log` and why?
+* What happens if you `console.log` `window` instead of `waffles`?
+* What happens if you `console.log` `process` instead of `waffles`?
+* What happens if you `console.log` `window` instead of `chicken`?
+* What happens if you `console.log` `process` instead of `chicken`?
+* How does the `script.js` file get from the `public` folder to the browser?
+* When does it get there?
+* Find all of the relevant requests in the chrome dev tools network tab.
 
+### further
 
-
-#### further
 Add to your `script.js`.
 
-When the page loads, create a button. When the user clicks the button, wait 5 seconds. Get rid of all the content on the screen. Turn the background color black. Display a message (in white text) that says "Reversed!".
+When the page loads, create a button. When the user clicks the button, wait 5 seconds. Get rid of all the content on the screen. Turn the background color black. Display a message \(in white text\) that says "Reversed!".
 
-#### further
+### further
 
 Add a new app.get
-```
+
+```text
 app.get('/dogs/:name', (request, response) => {
   console.log('yay dogs');
 
@@ -174,7 +180,8 @@ app.get('/dogs/:name', (request, response) => {
 ```
 
 dog.jsx
-```
+
+```text
 var React = require('react');
 
 class Dog extends React.Component {
@@ -203,15 +210,18 @@ Instead, this time, make the message include the name of the dog in the `request
 To get the name of the dog from request params into your `script.js`, construct the value of the variable as a string in the jsx file:
 
 add to dog.jsx:
-```
+
+```text
 <script>
   var name = {this.props.dog.name};
 </script>
 ```
 
-#### further
+### further
+
 Add a database- pokemons, songs, etc.
 
 Write an app.get show route, e.g., `/pokemon/:id` or `/songs/:id`, etc.
 
 When the user clicks a button, 5 seconds later show the name of the pokemon/song.
+

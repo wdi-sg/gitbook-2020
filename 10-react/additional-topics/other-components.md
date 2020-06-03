@@ -1,14 +1,14 @@
-# Other Component Syntaxes
+# Other Component Types
 
 ## Pure Functional Components
 
 If your component does not have state, you do not actually need to write it with a class.
 
-```
+```text
 const HelloWorld = () => (<div>Hello world</div>);
 ```
 
-```
+```text
 const Notification = (props) => {
   const {level, message} = props;
   const classNames = ['alert', 'alert-' + level]
@@ -21,12 +21,14 @@ const Notification = (props) => {
 ```
 
 ## Hooks
+
 Hooks are a new way of doing state in react. They also enable some types functionality that before would require lifecycle methods.
 
 As of 16/1/2019, in version 16.8.0 this feature became available.
 
 Classic Component Syntax:
-```
+
+```text
 class Example extends React.Component {
   constructor(){
     super()
@@ -52,9 +54,9 @@ class Example extends React.Component {
 }
 ```
 
-
 New Hook Syntax:
-```
+
+```text
 import React, { useState } from 'react';
 
 function Example() {
@@ -76,4 +78,5 @@ function Example() {
 }
 ```
 
-See more here: (https://reactjs.org/docs/hooks-intro.html)[https://reactjs.org/docs/hooks-intro.html]
+See more here: \([https://reactjs.org/docs/hooks-intro.html\)\[https://reactjs.org/docs/hooks-intro.html](https://reactjs.org/docs/hooks-intro.html%29[https://reactjs.org/docs/hooks-intro.html)\]
+

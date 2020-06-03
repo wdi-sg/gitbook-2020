@@ -1,9 +1,10 @@
-# Model
+# Models
 
-### db.js
+## db.js
+
 Configs for your db and the model files:
 
-```js
+```javascript
 const pg = require('pg');
 
 // require every single model file in your app
@@ -40,10 +41,11 @@ module.exports = {
 };
 ```
 
-### models/pokemon.js
+## models/pokemon.js
 
 Export model functions as a module
-```js
+
+```javascript
 module.exports = (dbPoolInstance) => {
 
   // `dbPoolInstance` is accessible within this function scope
@@ -81,18 +83,19 @@ module.exports = (dbPoolInstance) => {
 };
 ```
 
-
-
-### index.js
+## index.js
 
 Where do we actually integrate this back into our app? In the index.js file.
 
 Require the db file
-```js
+
+```javascript
 const db = require('./db');
 ```
 
 Pass all of that stuff into routes
-```js
+
+```javascript
 require('./routes')(app, db);
 ```
+

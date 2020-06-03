@@ -1,8 +1,8 @@
-# functions
+# Functions
 
 In the next 12 weeks we will learn to write web applictation software.
 
-As we build up to an example of a complete application, we'll be starting with the fundamental building blocks of that application (and of all software)
+As we build up to an example of a complete application, we'll be starting with the fundamental building blocks of that application \(and of all software\)
 
 First we'll see functions as the fundamental building block of all programs.
 
@@ -10,27 +10,24 @@ Functions are the atomic computation structure of a program- something that take
 
 As programmers the definition of functions is the first tool we'll define to begin the process of solving complex problems.
 
-```js
-
+```javascript
 var add = function(a,b){
 
   return a + b;
 };
 ```
 
-##### function definition
+**function definition**
 
-A function is a program definiton of at least one operation that gives back a value (the result of some operations)
+A function is a program definiton of at least one operation that gives back a value \(the result of some operations\)
 
 The return keyword: gives data as output of the function
-
 
 ### functions as operations on data
 
 A real world example is a function that calculates area of a disk:
 
-```
-
+```text
 var areaOfDisk = function( radius ){
 
   return 3.1415 * radius;
@@ -47,33 +44,32 @@ As the goal of our programs grows in complexity, the we want ot be able to slowl
 
 We need a method that has several attributes:
 
-- modular / composed of parts
-- easily verifiable
-- easy to understand at each level
+* modular / composed of parts
+* easily verifiable
+* easy to understand at each level
 
 To do that, we will be trying to make a series of functions that rely upon each other to compute and trasform our inputs from start to finish.
 
 We'll call this function composition.
 
-##### Area of Ring
+**Area of Ring**
 
 We want to know the area of a ring instead of a disk.
 
 We can define the area of a ring as the area of one disk minus the other. We can create a function that encapsulates this:
 
-```
+```text
 var areaOfRing = function(d1, d2){
   var ring = areaOfDisk(d1) - areaOfDisk(d2);
   return ring;
 }
-
 ```
 
 ### functions built into the language
 
 Functions we've already seen:
 
-```
+```text
 console.log()
 alert()
 ```
@@ -81,7 +77,8 @@ alert()
 What do these do? Do they have return values?
 
 Some others are:
-```
+
+```text
 var weather = "sunny";
 weather.toUpperCase();
 weather.toLowerCase();
@@ -109,7 +106,8 @@ Here you must infer that the task is to take the employees hourly wage and multi
 You are taking input and giving output.
 
 Your solution might look something like this:
-```
+
+```text
 var calculateWage = function( hourlyRate, hoursWorked ){
   return hourlyRate * hoursWorked;
 };
@@ -117,66 +115,63 @@ var calculateWage = function( hourlyRate, hoursWorked ){
 
 We made a couple of program design descisions here:
 
-- we defined our parameters by naming them what they represent
-- we did a multiplication operation on them
-- we returned the result
-- we made an implicit assumption as to the js data type of the parameters
-
+* we defined our parameters by naming them what they represent
+* we did a multiplication operation on them
+* we returned the result
+* we made an implicit assumption as to the js data type of the parameters
 
 ## function writing process
 
 We will be implementing a specific process for translating our word problems into functions that run on data.
 
- `1.` Function Purpose
-An english description of what the entire function is for:
+`1.` Function Purpose An english description of what the entire function is for:
 
 To calculate the monthly wage of a worker given a rate and the hours worked.
 
- `2.` Input Data Description
+`2.` Input Data Description
 
 In english, describe what data your function deals with.
 
 Name the parameters after what data they represent.
 
-```
+```text
 hourlyRate - the rate earned per hour
 hoursWorked - number of hours worked
 ```
 
- `3.` Data Examples
+`3.` Data Examples
 
 Write actual examples for the input data.
 
 You should think about a range of examples. What are the possible input values? Give examples.
 
-```
+```text
 var hoursWorked = 5;
 ```
 
- `4.` Function Signature
+`4.` Function Signature
 
-Describe the *javascript* language data types your function deals with.
-```
+Describe the _javascript_ language data types your function deals with.
+
+```text
 hourlyRate (number), hoursWorked (number) --> monthlyWage (number)
 ```
 
- `5.` Code
+`5.` Code
 
 You're ready to start coding. Write the actual javascript that fits the behavior you described above.
 
 Make it work.
 
- `6.` Functional Examples
-var monthlyWage = calculateWage( 15, 40 ); // will equal 600
+`6.` Functional Examples var monthlyWage = calculateWage\( 15, 40 \); // will equal 600
 
- `7.` Test
-Run the examples yourself.
+`7.` Test Run the examples yourself.
 
- `8.` Review & Refactor
-If your code is sloppy or could be changed to be more abstract, make those changes. Have you repeated yourself? Is there a way to make your code more clear? Easier to read?
+`8.` Review & Refactor If your code is sloppy or could be changed to be more abstract, make those changes. Have you repeated yourself? Is there a way to make your code more clear? Easier to read?
 
 A completed example:
-```
+
+```text
 /*
  * calculateWage
  *
@@ -221,7 +216,8 @@ Write a function that takes two string arguments. The function should return a s
 ### further
 
 Note: you will need `.length` for this:
-```
+
+```text
 var weather = "sunny";
 console.log( weather.length ); // outputs 5
 ```
@@ -231,3 +227,4 @@ Write a function that takes in a string argument. The function should return the
 Write a function that takes in two string arguments. The function should return the longer word.
 
 Write a function that takes in two string arguments. The function should return a single string that is the combination of the two arguments. The longer string should be first.
+

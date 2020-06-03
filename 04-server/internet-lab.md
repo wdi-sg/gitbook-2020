@@ -1,30 +1,25 @@
-# Pinging Around the World
+# Internet Lab
 
-#### Use the `host` command to see what the IP address of a host
-```
+## Use the `host` command to see what the IP address of a host
+
+```text
 host google.com
 ```
 
-#### Use the `ping` command to see how long it takes for servers to respond to your computer:
+## Use the `ping` command to see how long it takes for servers to respond to your computer:
 
-All requests sent from your computer must travel across the internet, going
-through various servers, in order to make the delivery. Using the `ping`
-command in the terminal window, try to find servers that respond quickly, and
-find some that take longer to respond. Hit `CTRL + C` if you need to exit
-`ping`. **What are the fastest and slowest sites you can ping?**
+All requests sent from your computer must travel across the internet, going through various servers, in order to make the delivery. Using the `ping` command in the terminal window, try to find servers that respond quickly, and find some that take longer to respond. Hit `CTRL + C` if you need to exit `ping`. **What are the fastest and slowest sites you can ping?**
 
-> University servers are usually hosted on their actual campuses. Use
-> university servers to estimate how long it takes requests to travel around
-> the world. Look up the distance between cities and calculate kilometers / time in
-> milliseconds to calculate how fast these requests travel.
+> University servers are usually hosted on their actual campuses. Use university servers to estimate how long it takes requests to travel around the world. Look up the distance between cities and calculate kilometers / time in milliseconds to calculate how fast these requests travel.
 
-```
+```text
 # Less than 10 km away from GA Singapore campus
 ping www.nus.edu.sg
 ```
 
-##### National University of Singapore
-```
+### National University of Singapore
+
+```text
 PING www.nus.edu.sg (137.132.21.27): 56 data bytes
 64 bytes from 137.132.21.27: icmp_seq=0 ttl=42 time=5.442 ms
 64 bytes from 137.132.21.27: icmp_seq=1 ttl=42 time=6.124 ms
@@ -35,8 +30,9 @@ PING www.nus.edu.sg (137.132.21.27): 56 data bytes
 round-trip min/avg/max/stddev = 5.114/5.560/6.124/0.421 ms
 ```
 
-##### Stanford University in California
-```
+### Stanford University in California
+
+```text
 PING stanford.edu (171.67.215.200): 56 data bytes
 64 bytes from 171.67.215.200: icmp_seq=0 ttl=235 time=173.482 ms
 64 bytes from 171.67.215.200: icmp_seq=1 ttl=235 time=201.556 ms
@@ -47,11 +43,11 @@ PING stanford.edu (171.67.215.200): 56 data bytes
 round-trip min/avg/max/stddev = 173.482/187.338/201.556/11.464 ms
 ```
 
-##### Other World Wide Campuses
+### Other World Wide Campuses
 
 Try pinging these other campuses around the world.
 
-```
+```text
 $ ping www.u-tokyo.ac.jp # The University of Tokyo: 5,312 km from Singapore, in the other direction!
 $ ping www.cam.ac.uk # Cambridge University in London: 10,841 km from Singapore
 $ ping sydney.edu.au # The University of Sydney in Australia: 7,822 km from Singapore
@@ -60,33 +56,28 @@ $ ping www.cs.nyu.edu # New York University: 15,323 km from Singapore
 $ ping www.uce.edu.ec # Central University of Ecuador in South America: 19,774 km from Singapore
 ```
 
-##### Mystery IP Address
+### Mystery IP Address
 
 Ping this specific IP address and see how long it takes the server to respond.
 
-Google this IP to find out what makes it unique. Be sure to use the Google
-homepage. IP addresses are hard to quick-search from your browser's location
-bar! If you type in an IP address your browser will try to load it as if it
-were a web page!
+Google this IP to find out what makes it unique. Be sure to use the Google homepage. IP addresses are hard to quick-search from your browser's location bar! If you type in an IP address your browser will try to load it as if it were a web page!
 
-```
+```text
 ping 127.0.0.1
 ```
 
-#### Experiment with the traceroute command to see how internet traffic flows between your computer and servers:
+## Experiment with the traceroute command to see how internet traffic flows between your computer and servers:
 
+Use visual traceroute to see on a map where your packets are going. [http://en.dnstools.ch/visual-traceroute.html](http://en.dnstools.ch/visual-traceroute.html)
 
-Use visual traceroute to see on a map where your packets are going.
-[http://en.dnstools.ch/visual-traceroute.html](http://en.dnstools.ch/visual-traceroute.html)
-
-```
+```text
 # the traceroute command will show which servers routed the traffic
 traceroute stanford.edu
 ```
 
-#####Sample Output
+### Sample Output
 
-```
+```text
 $ traceroute www.nus.edu.sg 
 traceroute to www.nus.edu.sg (137.132.21.27), 64 hops max, 52 byte packets
  1  192.168.85.1 (192.168.85.1)  1.738 ms  1.989 ms  1.157 ms
@@ -108,17 +99,20 @@ traceroute to www.nus.edu.sg (137.132.21.27), 64 hops max, 52 byte packets
 15  *^C
 ```
 
-#### Experiment with cURL and send requests to various web pages. Here are some
+## Experiment with cURL and send requests to various web pages. Here are some
+
 useful flags you can use:
 
-#####Headers flag
-```
+### Headers flag
+
+```text
 # -I returns the response headers only
 curl -I http://www.google.com
 ```
 
-#####Sample Output
-```
+### Sample Output
+
+```text
 HTTP/1.1 200 OK
 Date: Sun, 27 Sep 2015 02:28:12 GMT
 Expires: -1
@@ -127,23 +121,25 @@ Content-Type: text/html; charset=ISO-8859-1
 ...
 ```
 
-#####Verbose mode
-```
+### Verbose mode
+
+```text
 # -v is verbose mode and returns the entire request and response (along with some additional info)
 curl -v http://www.google.com
 ```
 
-#####Sample Output
-```
+### Sample Output
+
+```text
 * Rebuilt URL to: http://www.google.com/
 *   Trying 2607:f8b0:400a:806::2004...
 * Connected to www.google.com (2607:f8b0:400a:806::2004) port 80 (#0)
 ...
 ```
 
-#### Using cURL and the `-I` flag, get the following response codes from some webpages:
+## Using cURL and the `-I` flag, get the following response codes from some webpages:
 
-- 2xx - examples include 200 (OK), 201 (Created)
-- 3xx - examples include 301 (Moved permanently)
-- 4xx - examples include 400 (Bad request), 404 (Not found)
+* 2xx - examples include 200 \(OK\), 201 \(Created\)
+* 3xx - examples include 301 \(Moved permanently\)
+* 4xx - examples include 400 \(Bad request\), 404 \(Not found\)
 

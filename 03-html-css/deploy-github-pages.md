@@ -1,9 +1,10 @@
-# Hosting on Github Pages
+# Deploy - github pages
 
 ## Objectives
+
 * Understand some of the benefits of hosting on [Github Pages](https://pages.github.com/)
 * Create a Github page using the automatic generator
-* Create a Github page manually (using your own HTML/CSS/JS)
+* Create a Github page manually \(using your own HTML/CSS/JS\)
 
 ## Deploying your web application using Github Pages
 
@@ -14,8 +15,9 @@
 * Links you to a community of other developers through Github
 
 ### Pages gone Viral
+
 * Probably the most well-known front-end app hosted on Github Pages: [2048](http://gabrielecirulli.github.io/2048/)
-* Read more about [the game and the Italian developer, Gabriele Cirulli](https://en.wikipedia.org/wiki/2048_(video_game))
+* Read more about \[the game and the Italian developer, Gabriele Cirulli\]\([https://en.wikipedia.org/wiki/2048\_\(video\_game](https://en.wikipedia.org/wiki/2048_%28video_game)\)\)
 * If you're ever bored and want to [make your own 2048](http://2048.directory/), you can fork Gabriele's game.
 
 ### Setup Your Main Page
@@ -24,19 +26,19 @@ We'll start by creating a site at `username.github.io`. This repo contains HTML,
 
 Follow instructions on [Github Pages](https://pages.github.com/) to initialize GitHub Pages in your GitHub account.
 
-- [Create a new repository](https://github.com/new) named `username.github.io` where `username` is your GitHub username.
-- Clone the new repo to your computer `git clone https://github.com/username/username.github.io`
-- Change your directory to the repo `cd username.github.io`
-- Create a simple Hello World homepage: `echo "Hello World" > index.html`
-- Add new files, commit the change, and push the repo.
+* [Create a new repository](https://github.com/new) named `username.github.io` where `username` is your GitHub username.
+* Clone the new repo to your computer `git clone https://github.com/username/username.github.io`
+* Change your directory to the repo `cd username.github.io`
+* Create a simple Hello World homepage: `echo "Hello World" > index.html`
+* Add new files, commit the change, and push the repo.
 
-```
+```text
 git add -A
 git commit -m "Initial commit"
 git push -u origin master
 ```
 
-- View the now-hosted page! http://username.github.io.
+* View the now-hosted page! [http://username.github.io](http://username.github.io).
 
 #### Using other repos with GitHub Pages
 
@@ -47,11 +49,11 @@ Think of a branch as a separate "timeline" for your code. It can represent a set
 1. Choose an existing repo that you want to host on GitHub Pages.
 2. Checkout that repo on your local machine.
 3. Make sure you're on the master branch: `git checkout master`
-3. Create the special gh-pages branch: `git checkout -b gh-pages`
+4. Create the special gh-pages branch: `git checkout -b gh-pages`
 
 Add the files you want to deploy, if necessary:
 
-```
+```text
 git add index.html
 git add css/*
 git add js/*
@@ -60,7 +62,7 @@ git add js/*
 
 Then, commit and push the local `gh-pages` branch up to Github:
 
-```
+```text
 git commit -m "Deploying the first version of my project"
 git push -u origin gh-pages
 ```
@@ -73,13 +75,13 @@ When working on your project, your changes are committed to the `master` branch.
 
 Let's say I made two commits on `master` and I'm ready to deploy those changes. First, checkout the `gh-pages` branch.
 
-```
+```text
 git checkout gh-pages
 ```
 
 Then merge the changes from `master`.
 
-```
+```text
 git merge master
 ```
 

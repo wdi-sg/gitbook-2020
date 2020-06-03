@@ -1,24 +1,22 @@
-# Reading Code
+# Code Reading
 
 ## repos setup
 
 #### Get the code
 
-- go to the pull requests page for this assignment
-- find your partner's pull request
-- click into their profile to find their repo
-- click on the repo address so that you can clone it `git clone {copied address}` (note: you are `clone`ing not `fork`ing!)
-- make sure that you run the command *outside* of where you have your own forked repo
-
+* go to the pull requests page for this assignment
+* find your partner's pull request
+* click into their profile to find their repo
+* click on the repo address so that you can clone it `git clone {copied address}` \(note: you are `clone`ing not `fork`ing!\)
+* make sure that you run the command _outside_ of where you have your own forked repo
 
 #### Become a collaborator
 
-- invite your partner as a collaborator to your own repo
-    - go to the settings tab of your repo
-    - on the left-hand bar click "collaborators"
-    - enter their github username
-
-- recieve your repo collaboration invite (check your github email)
+* invite your partner as a collaborator to your own repo
+  * go to the settings tab of your repo
+  * on the left-hand bar click "collaborators"
+  * enter their github username
+* recieve your repo collaboration invite \(check your github email\)
 
 ## Run
 
@@ -30,15 +28,16 @@ Read the code. Take time to see how the code makes the output you are seeing.
 
 Read the code in a linear way from where you think it starts to where you think it outputs. If you don't know where it starts, try it backwards- begin where you think it outputs and try to work your way back to where you think it starts.
 
-You *can* make changes:
+You _can_ make changes:
 
-- Write console.log for any part of the code where it's difficult to understand what the values are.
-- Wrtie comments to youreself as you go to understand what the code is doing.
+* Write console.log for any part of the code where it's difficult to understand what the values are.
+* Wrtie comments to youreself as you go to understand what the code is doing.
 
 Note any questions you have about how the code works or what the reasoning is behind it working that way.
 
 ## Meet
-Meet with the person who wrote the code and ask them the questions you have, *or* if you are still not clear on how it works, ask them to explain it to you.
+
+Meet with the person who wrote the code and ask them the questions you have, _or_ if you are still not clear on how it works, ask them to explain it to you.
 
 ## Changing the Code
 
@@ -56,7 +55,7 @@ Is each function propery documented? Is the documentation accurate?
 
 Does the code have any errors?
 
-Does it handle all cases / kinds of inputs well? (i.e., empty input, long input, short input)
+Does it handle all cases / kinds of inputs well? \(i.e., empty input, long input, short input\)
 
 Could it check for input in a better or more thorough way?
 
@@ -71,10 +70,12 @@ Work on one of the furthers for this exercise in order to add new code.
 Add code from today's lesson into this code.
 
 ### Comment
-- go to your partner's pull request. Make at least one comment on one of their commits.
+
+* go to your partner's pull request. Make at least one comment on one of their commits.
 
 ## Pull Request
 
 `git push origin yourbranchname`
 
 Make a new pull request with your changes so that we can see it.
+

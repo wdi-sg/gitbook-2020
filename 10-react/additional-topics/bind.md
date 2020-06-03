@@ -1,13 +1,16 @@
-# Bind for React Classes
+# Click Events / Bind
 
 ## Click Handlers
+
 First, let's see what a click handler looks like in react.
-```
+
+```text
 <button onClick={this.handleClick}>click me!</button>
 ```
 
 Then we can write the handler in the class:
-```
+
+```text
 // our click method
 handleClick(){
   console.log( "yay" );
@@ -16,23 +19,25 @@ handleClick(){
 
 This works just like normal js.
 
-*But* what happens if we start doing stuff- for example we want to access things we did in normal javascript:
+_But_ what happens if we start doing stuff- for example we want to access things we did in normal javascript:
 
 `this` refered to the button being clicked on.
 
 If we `console.log` it, we can see that it's undefined. This also means we have no way of accessing the other attributes within the class.
 
-Under the hood, what happens with any click handler (not just those in react) is that the window grabs the clikc handler for itself. That is why `this` in a click handler is the element being clicked on.
+Under the hood, what happens with any click handler \(not just those in react\) is that the window grabs the clikc handler for itself. That is why `this` in a click handler is the element being clicked on.
 
 How do we set the context / value of this to the current class?
 
 ## Javascript Bind
 
-##### `this` keyword: (review)
+**this keyword: \(review\)**
+
 In javascript we use `this` keyowrd to refer to the current context of the function.
 
 Given this ES5 JS:
-```js
+
+```javascript
 var saySomething = {
   message : "hello",
   speak : function(){
@@ -43,15 +48,15 @@ var saySomething = {
 saySomething.speak();
 ```
 
-When we look at `this.message`, it refers to the message key *inside the current object*.
+When we look at `this.message`, it refers to the message key _inside the current object_.
 
 Given this code:
 
-```html
+```markup
 <button id="submit">submit</button>
 ```
 
-```js
+```javascript
 document.querySelector('#submit').addEventListener('click',function(){
   console.log(this);
 });
@@ -62,24 +67,28 @@ document.querySelector('#submit').addEventListener('click',function(){
 #### JS Execution Context
 
 What would happen if we used our speak method as a click callback?
-```js
+
+```javascript
 document.querySelector('#submit').addEventListener('click',saySomething.speak);
 ```
 
-What is actually happening is that when you set a callback is that the DOM holds onto your callback function- *the context of the execution* changes.
+What is actually happening is that when you set a callback is that the DOM holds onto your callback function- _the context of the execution_ changes.
 
 #### Why we need bind:
+
 With `bind` javascript gives us an explicit way to set the function context before the function gets executed.
 
-```js
+```javascript
 saySomething.speak = saySomething.speak.bind( saySomething );
 ```
 
 From [MDN:](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
-> The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+> The bind\(\) method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
 
 When we say:
-```html
+
+```markup
 <button onClick={this.handleClick}>click me!</button>
 ```
 
@@ -88,9 +97,10 @@ React isn't doing any magic to fix the above problem.
 We need to bind our handleClick method to the current component.
 
 ### Exercise: JS bind
+
 Start a new `index.html` file:
 
-```
+```text
 <!doctype html>
 <html lang="en">
   <head>
@@ -105,7 +115,8 @@ Start a new `index.html` file:
 ```
 
 In the script tag:
-```js
+
+```javascript
 var saySomething = {
   message : "hello",
   speak : function(){
@@ -119,36 +130,44 @@ saySomething.speak();
 Call `saySomething.speak()` from the dev console to make sure it works.
 
 Add a button into the body html
-```html
+
+```markup
 <button id="submit">submit</button>
 ```
 
 Set a click handler to the saySomething method.
-```js
+
+```javascript
 document.querySelector('#submit').addEventListener('click',saySomething.speak);
 ```
 
 The message will be undefined.
 
 See the return value of bind
-```
+
+```text
 saySomething.speak.bind( saySomething );
 ```
 
 Fix it by doing a `bind` before you set the click handler.
-```
+
+```text
 saySomething.speak = saySomething.speak.bind( saySomething );
 ```
 
 #### Further
+
 Does this work instead? Why?
-```js
+
+```javascript
 document.querySelector('#submit').addEventListener('click',saySomething.speak.bind(saySomething));
 ```
 
 #### Bind in react:
+
 Run this code:
-```
+
+```text
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -201,7 +220,10 @@ Run this code:
 </body>
 </html>
 ```
+
 Add bind in the consturctor to make it work:
-```
+
+```text
 this.handleClick = this.handleClick.bind(this);
 ```
+
