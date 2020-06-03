@@ -1,6 +1,6 @@
 # Table of contents
 
-* [SITEMAP](readme.md)
+* [Sitemap](readme.md)
 * [Introduction](readme%20%281%29.md)
 * [Basic Tools](01-tools/README.md)
   * [Command Line](01-tools/01readme/README.md)
