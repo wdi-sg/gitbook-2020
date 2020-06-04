@@ -4,16 +4,16 @@
 ### Week 1
 
 #### Day 1
-##### Morning Exercise
+##### Introduction to SEI
 ##### Topics
 [intro slides]
-[Command Line](https://felixander-loetama.gitbook.io/sei-gitbook-2020/01-tools/01readme)
-[Command Line Lab](https://felixander-loetama.gitbook.io/sei-gitbook-2020/01-tools/01readme/command-line-lab)
-[js intro](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro)
-[js operations](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro/01-operations.html)
-[js conditionals](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro/02-conditionals.html)
-[local git](https://felixander-loetama.gitbook.io/sei-gitbook-2020/01-tools/intro-git/readme.html)
-[CSS Selectors](https://felixander-loetama.gitbook.io/sei-gitbook-2020/03-html-css/css-selectors/readme.html)
+[Command Line](https://wdi-sg.github.io/gitbook2020/01-tools/01readmes)
+[Command Line Lab](https://wdi-sg.github.io/gitbook2020/01-tools/01readme/command-line-lab.html)
+[js intro](https://wdi-sg.github.io/gitbook2020/02-js-intro)
+[js operations](https://wdi-sg.github.io/gitbook2020/02-js-intro/01-operations.html)
+[js conditionals](https://wdi-sg.github.io/gitbook2020/02-js-intro/02-conditionals.html)
+[local git](https://wdi-sg.github.io/gitbook2020/01-tools/intro-git/readme.html)
+[CSS Selectors](https://wdi-sg.github.io/gitbook2020/03-html-css/css-selectors/readme.html)
 ##### Assignment
 [pokedex html](https://github.com/wdi-sg/pokedex-html)
 
@@ -21,13 +21,13 @@
 ##### Morning Exercise
 [Command Line Murder Mystery](https://github.com/wdi-sg/command-line-murder-mystery)
 ##### Topics
-[pair programming](https://felixander-loetama.gitbook.io/sei-gitbook-2020/01-workflow/pairing)
-[standup](https://felixander-loetama.gitbook.io/sei-gitbook-2020/01-workflow/standup.html)
-[functions](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro/03-functions.html)
-[js template](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro/04-template.html)
-[Remote Git](https://felixander-loetama.gitbook.io/sei-gitbook-2020/01-tools/intro-git/04remotegit.html)
+[pair programming](https://wdi-sg.github.io/gitbook2020/01-workflow/pairing)
+[standup](https://wdi-sg.github.io/gitbook2020/01-workflow/standup.html)
+[functions](https://wdi-sg.github.io/gitbook2020/02-js-intro/03-functions.html)
+[js template](https://wdi-sg.github.io/gitbook2020/02-js-intro/04-template.html)
+[Remote Git](https://wdi-sg.github.io/gitbook2020/01-tools/intro-git/04remotegit.html)
 [git cheatsheet](https://github.com/wdi-sg/gitbook2020/blob/master/01-tools/intro-git/06remotefork.md)
-[CSS Box Model](https://felixander-loetama.gitbook.io/sei-gitbook-2020/03-html-css/positioning/02box-model.html)
+[CSS Box Model](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/02box-model.html)
 [Box Model Lab](https://github.com/wdi-sg/box-model-lab)
 ##### Assignment
 [Temperature Converter](https://github.com/wdi-sg/temperature_converter) |
@@ -36,10 +36,10 @@
 ##### Morning Exercise
 [CSS iOS](https://github.com/wdi-sg/css-ios)
 ##### Topics
-[js loops](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro/07-arrays-loops.html)
-[js objects](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro/06-objects.html)
-[how to design](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro/05-design.html)
-[CSS Display / Positioning](https://felixander-loetama.gitbook.io/sei-gitbook-2020/03-html-css/positioning/03display-positioning.html)
+[js loops](https://wdi-sg.github.io/gitbook2020/02-js-intro/07-arrays-loops.html)
+[js objects](https://wdi-sg.github.io/gitbook2020/02-js-intro/06-objects.html)
+[how to design](https://wdi-sg.github.io/gitbook2020/02-js-intro/05-design.html)
+[CSS Display / Positioning](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/03display-positioning.html)
 ##### Assignment
 [airline seats](https://github.com/wdi-sg/seats)
 
@@ -48,9 +48,9 @@
 [Wendy Bite](https://github.com/wdi-sg/wendy-bite)
 ##### Topics
 [how to program]
-[js iteration](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro/09-iteration.html)
-[CSS Layout](https://felixander-loetama.gitbook.io/sei-gitbook-2020/03-html-css/positioning/07layout.html)
-[dev tools](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro/10-chrome-dev-tools.html)
+[js iteration](https://wdi-sg.github.io/gitbook2020/02-js-intro/09-iteration.html)
+[CSS Layout](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/07layout.html)
+[dev tools](https://wdi-sg.github.io/gitbook2020/02-js-intro/10-chrome-dev-tools.html)
 [Google Shopping Functions](https://github.com/wdi-sg/google-shopping-functions)
 ##### Assignment
 [table flip](https://github.com/wdi-sg/table-flip)
@@ -59,10 +59,10 @@
 ##### Morning Exercise
 [Hippy Portfolio](https://github.com/wdi-sg/hippy-portfolio)
 ##### Topics
-[js more iteration](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js-intro/11-more-iteration.html)
-[js set timeout](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/js-callbacks-iterators/readme.html)
-[CSS Responsive](https://felixander-loetama.gitbook.io/sei-gitbook-2020/03-html-css/positioning/02responsivedesign.html)
-[Code Review Ex](https://felixander-loetama.gitbook.io/sei-gitbook-2020/01-workflow/code-review.html)
+[js more iteration](https://wdi-sg.github.io/gitbook2020/02-js-intro/11-more-iteration.html)
+[js set timeout](https://wdi-sg.github.io/gitbook2020/02-js/js-callbacks-iterators/readme.html)
+[CSS Responsive](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/02responsivedesign.html)
+[Code Review Ex](https://wdi-sg.github.io/gitbook2020/01-workflow/code-review.html)
 ##### Assignment
 [Choose Your Own Adventure](https://github.com/wdi-sg/choose_your_own_adventure_js)
 
@@ -72,10 +72,10 @@
 ##### Morning Exercise
 [CSS Airbnb](https://github.com/wdi-sg/css-airbnb)
 ##### Topics
-[Browser JS](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/browser-js/readme.html)
-[JS DOM](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/browser-js/js-dom-manipulation.html)
-[JS DOM CREATION](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/browser-js/js-dom-manipulation-creation.html)
-[CSS Flex Box](https://felixander-loetama.gitbook.io/sei-gitbook-2020/03-html-css/positioning/08layout-flexbox.html)
+[Browser JS](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/readme.html)
+[JS DOM](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/js-dom-manipulation.html)
+[JS DOM CREATION](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/js-dom-manipulation-creation.html)
+[CSS Flex Box](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/08layout-flexbox.html)
 [Flexbox Froggy](https://flexboxfroggy.com/)
 In-Class Lab:
 [Fellowship of the DOM](https://github.com/wdi-sg/fellowship-of-the-dom)
@@ -86,8 +86,8 @@ https://github.com/wdi-sg/draw-this
 ##### Morning Exercise
 https://github.com/wdi-sg/brook-and-lyn
 ##### Topics
-[JS DOM Events](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/browser-js/js-dom-events.html)
-[CSS Bootstrap](https://felixander-loetama.gitbook.io/sei-gitbook-2020/03-html-css/css-bootstrap/bootstrap.html)
+[JS DOM Events](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/js-dom-events.html)
+[CSS Bootstrap](https://wdi-sg.github.io/gitbook2020/03-html-css/css-bootstrap/bootstrap.html)
 ##### Assignment
 [Tictactoe](https://github.com/wdi-sg/tictactoe)
 
@@ -95,7 +95,7 @@ https://github.com/wdi-sg/brook-and-lyn
 ##### Morning Exercise
 [CSS Airbnb Bootstrap](https://github.com/wdi-sg/css-airbnb-bootstrap)
 ##### Topics
-[JS Browser Scope](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/browser-js/scope.html)
+[JS Browser Scope](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/scope.html)
 ##### Assignment
 
 #### Day 4
@@ -103,7 +103,7 @@ https://github.com/wdi-sg/brook-and-lyn
 [CSS css pos](https://github.com/wdi-sg/css-positioning)
 [CSS Pokedex](https://github.com/wdi-sg/pokedex-css)
 ##### Topics
-[AJAX](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/browser-js/ajax.html)
+[AJAX](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/ajax.html)
 ##### Assignment
 [TV Browser](https://github.com/wdi-sg/tv-browser)
 
@@ -113,7 +113,7 @@ https://github.com/wdi-sg/brook-and-lyn
 ##### Topics
 Code Review
 ##### Assignment
-[InstallFest](https://felixander-loetama.gitbook.io/sei-gitbook-2020/00-config-deployment/installfest/osx/install2.html)
+[InstallFest](https://wdi-sg.github.io/gitbook2020/00-config-deployment/installfest/osx/install2.html)
 
 
 # Unit 2
@@ -124,17 +124,17 @@ Code Review
 #### Day 1
 ##### Morning Exercise
 ##### Topics
-[node](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-server/00node.html)
-[ES6](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-server/00es6.html)
-[Node Modules](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-server/01modules.html)
+[node](https://wdi-sg.github.io/gitbook2020/04-server/00node.html)
+[ES6](https://wdi-sg.github.io/gitbook2020/04-server/00es6.html)
+[Node Modules](https://wdi-sg.github.io/gitbook2020/04-server/01modules.html)
 ##### Assignment
 https://github.com/wdi-sg/cli-css
 
 #### Day 2
-[NPM](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-server/01npm.html)
-[FlatFile](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-server/02flatfile.html)
-[Internet Lab](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-server/internet-lab.html)
-[Internet Lab 2](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-server/internet-lab-2.html)
+[NPM](https://wdi-sg.github.io/gitbook2020/04-server/01npm.html)
+[FlatFile](https://wdi-sg.github.io/gitbook2020/04-server/02flatfile.html)
+[Internet Lab](https://wdi-sg.github.io/gitbook2020/04-server/internet-lab.html)
+[Internet Lab 2](https://wdi-sg.github.io/gitbook2020/04-server/internet-lab-2.html)
 ##### Assignment
 [CLI Todo](https://github.com/wdi-sg/cli-todo)
 
@@ -152,8 +152,8 @@ https://github.com/wdi-sg/cli-css
 #### Day 1
 ##### Morning Exercise
 ##### Topics
-[Express Intro](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-intro/readme.html)
-[Express URL](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-intro/03expressurls.html)
+[Express Intro](https://wdi-sg.github.io/gitbook2020/05-express/express-intro/readme.html)
+[Express URL](https://wdi-sg.github.io/gitbook2020/05-express/express-intro/03expressurls.html)
 ##### Assignment
 [Pokedex Express](https://github.com/wdi-sg/pokedex-express)
 
@@ -161,8 +161,8 @@ https://github.com/wdi-sg/cli-css
 ##### Morning Exercise
 [CSS Vegetables](https://github.com/wdi-sg/vegetables)
 ##### Topics
-[Express Views](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-intro/04views.html)
-[Express POST](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-crud/post.html)
+[Express Views](https://wdi-sg.github.io/gitbook2020/05-express/express-intro/04views.html)
+[Express POST](https://wdi-sg.github.io/gitbook2020/05-express/express-crud/post.html)
 ##### Assignment
 [Pokedex Express POST](https://github.com/wdi-sg/pokedex-express-post)
 
@@ -170,28 +170,28 @@ https://github.com/wdi-sg/cli-css
 ##### Morning Exercise
 [CSS Fashion Blog](https://github.com/wdi-sg/fashion-blog)
 ##### Topics
-[JS iterators (map)](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/js-callbacks-iterators/callbacks2.html)
-[Express Views 2](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-intro/05views-2.html)
-[Express Update Delete](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-crud/08update-delete.html)
+[JS iterators (map)](https://wdi-sg.github.io/gitbook2020/02-js/js-callbacks-iterators/callbacks2.html)
+[Express Views 2](https://wdi-sg.github.io/gitbook2020/05-express/express-intro/05views-2.html)
+[Express Update Delete](https://wdi-sg.github.io/gitbook2020/05-express/express-crud/08update-delete.html)
 ##### Assignment
 [Pokedex Express POST Part 2](https://github.com/wdi-sg/pokedex-express-post/blob/master/part-2.md)
 
 #### Day 4
 ##### Morning Exercise
 ##### Topics
-[git branching](https://felixander-loetama.gitbook.io/sei-gitbook-2020/11-groups/00branching.html)
-[Express Components](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-intro/components.html)
+[git branching](https://wdi-sg.github.io/gitbook2020/11-groups/00branching.html)
+[Express Components](https://wdi-sg.github.io/gitbook2020/05-express/express-intro/components.html)
 ##### Assignment
 code reading from previous assignment
 
 #### Day 5
 ##### Morning Exercise
 ##### Topics
-[JS Testing](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/js-testing/readme.html)
-[sql intro](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-databases/sql-intro/sql.html)
+[JS Testing](https://wdi-sg.github.io/gitbook2020/02-js/js-testing/readme.html)
+[sql intro](https://wdi-sg.github.io/gitbook2020/04-databases/sql-intro/sql.html)
 ##### Assignment
 [recipie keeper](https://github.com/wdi-sg/recipe-keeper)
-[SQL Install Fest](https://felixander-loetama.gitbook.io/sei-gitbook-2020/00-config-deployment/installfest/osx/install2.html)
+[SQL Install Fest](https://wdi-sg.github.io/gitbook2020/00-config-deployment/installfest/osx/install2.html)
 
 
 ### Week 5
@@ -200,8 +200,8 @@ code reading from previous assignment
 [CS - Intro to Algorithms](https://my.generalassemb.ly/activities/780)
 [CS - Big O](https://my.generalassemb.ly/activities/511)
 ##### Topics
-[Postgres](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-databases/postgres/readme.html)
-[SQL Node](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-databases/postgres/sql-node.html)
+[Postgres](https://wdi-sg.github.io/gitbook2020/04-databases/postgres/readme.html)
+[SQL Node](https://wdi-sg.github.io/gitbook2020/04-databases/postgres/sql-node.html)
 ##### Assignment
 [CLI todo SQL](https://github.com/wdi-sg/cli-todo-sql)
 
@@ -209,9 +209,9 @@ code reading from previous assignment
 ##### Morning Exercise
 [CS - Recursion](https://my.generalassemb.ly/activities/773)
 ##### Topics
-[Relational SQL](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-databases/relational/relational.html)
-[Node Postgres Setup](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-databases/postgres/sql-working.html)
-[Postgres CRUD](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-databases/postgres/CRUD-postgres.html)
+[Relational SQL](https://wdi-sg.github.io/gitbook2020/04-databases/relational/relational.html)
+[Node Postgres Setup](https://wdi-sg.github.io/gitbook2020/04-databases/postgres/sql-working.html)
+[Postgres CRUD](https://wdi-sg.github.io/gitbook2020/04-databases/postgres/CRUD-postgres.html)
 ##### Assignment
 [Express tunr](https://github.com/wdi-sg/tunr_express)
 
@@ -220,9 +220,9 @@ code reading from previous assignment
 [CS - Intro to sorting](https://my.generalassemb.ly/activities/818)
 [CS - Basic Sorting Algo (half of ex)](https://my.generalassemb.ly/activities/778)
 ##### Topics
-[Express Cookies](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-auth/cookies.html)
-[SQL M-M](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-databases/relational/many-many.html)
-[SQL ERD](https://felixander-loetama.gitbook.io/sei-gitbook-2020/04-databases/relational/erd.html)
+[Express Cookies](https://wdi-sg.github.io/gitbook2020/05-express/express-auth/cookies.html)
+[SQL M-M](https://wdi-sg.github.io/gitbook2020/04-databases/relational/many-many.html)
+[SQL ERD](https://wdi-sg.github.io/gitbook2020/04-databases/relational/erd.html)
 ##### Assignment
 [Express tunr part 2 ](https://github.com/wdi-sg/tunr_express/blob/master/part2.md)
 
@@ -230,8 +230,8 @@ code reading from previous assignment
 ##### Morning Exercise
 [CS - Basic Sorting Algo (half of ex)](https://my.generalassemb.ly/activities/778)
 ##### Topics
-[Express Password](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-auth/password.html)
-[Pass Hashing](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-auth/password2.html)
+[Express Password](https://wdi-sg.github.io/gitbook2020/05-express/express-auth/password.html)
+[Pass Hashing](https://wdi-sg.github.io/gitbook2020/05-express/express-auth/password2.html)
 ##### Assignment
 [Express tunr part 3 ](https://github.com/wdi-sg/tunr_express/blob/master/part3.md)
 
@@ -239,7 +239,7 @@ code reading from previous assignment
 ##### Morning Exercise
 [CS - Divide and Conquer MERGE SORT(half)](https://my.generalassemb.ly/activities/882)
 ##### Topics
-[MVC](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/express-mvc/readme.html)
+[MVC](https://wdi-sg.github.io/gitbook2020/05-express/express-mvc/readme.html)
 ##### Assignment
 [tweedr MVC](https://github.com/wdi-sg/mvc-tweedr)
 
@@ -249,9 +249,9 @@ code reading from previous assignment
 ##### Morning Exercise
 [CS - Divide and Conquer QUICK SORT(half)](https://my.generalassemb.ly/activities/882)
 ##### Topics
-[Express AJAX](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/ajax.html)
-[EC2](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/ec2-deploy.html)
-[Heroku](https://felixander-loetama.gitbook.io/sei-gitbook-2020/05-express/node-deploy.html)
+[Express AJAX](https://wdi-sg.github.io/gitbook2020/05-express/ajax.html)
+[EC2](https://wdi-sg.github.io/gitbook2020/05-express/ec2-deploy.html)
+[Heroku](https://wdi-sg.github.io/gitbook2020/05-express/node-deploy.html)
 ##### Assignment
 
 #### Day 2
@@ -267,7 +267,7 @@ code reading from previous assignment
 [Project]
 
 # Unit 3
-[Ruby Install](https://felixander-loetama.gitbook.io/sei-gitbook-2020/00-config-deployment/installfest/osx/install3.html)
+[Ruby Install](https://wdi-sg.github.io/gitbook2020/00-config-deployment/installfest/osx/install3.html)
 
 ### Week 7
 
@@ -275,13 +275,13 @@ code reading from previous assignment
 ##### Morning Exercise
 [CS - Distribution Sort ](https://my.generalassemb.ly/activities/802)
 ##### Topics
-[JS - Ruby Comparison](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/ruby-intro/ruby-js.html)
+[JS - Ruby Comparison](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/ruby-intro/ruby-js.html)
 [Ruby for beginners](http://ruby-for-beginners.rubymonstas.org/exercises.html)
 [--end here--](http://ruby-for-beginners.rubymonstas.org/exercises/truthiness.html)
-[Ruby Classes](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/ruby-classes/readme.html)
+[Ruby Classes](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/ruby-classes/readme.html)
 [Ruby for Begginers email class](http://ruby-for-beginners.rubymonstas.org/exercises/email.html)
-[Ruby OOP](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/ruby-classes/oop.html)
-[JS OOP??? - redo ruby OOP??](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/js-oop/readme.html)
+[Ruby OOP](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/ruby-classes/oop.html)
+[JS OOP??? - redo ruby OOP??](https://wdi-sg.github.io/gitbook2020/02-js/js-oop/readme.html)
 ##### Assignment
 [Ruby Cards](https://github.com/wdi-sg/ruby-oop-cards)
 
@@ -289,7 +289,7 @@ code reading from previous assignment
 ##### Morning Exercise
 [CS - Search Algo - binary search iterative](https://my.generalassemb.ly/activities/633)
 ##### Topic
-[Rails Demo](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/rails-intro/rails-demo.html)
+[Rails Demo](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/rails-intro/rails-demo.html)
 ##### Assignment
 [Instagram](https://github.com/wdi-sg/WDInstagram_rails)
 
@@ -299,9 +299,9 @@ code reading from previous assignment
 [CS - Search Algo - binary search recursive](https://my.generalassemb.ly/activities/633)
 
 ##### Topics
-[Rails 1-M](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/active-record/rails-1-M/readme.html)
-[Rails Active Record Review](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/active-record/readme.html)
-[JS OOP???](https://felixander-loetama.gitbook.io/sei-gitbook-2020/02-js/js-oop/readme.html)
+[Rails 1-M](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/active-record/rails-1-M/readme.html)
+[Rails Active Record Review](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/active-record/readme.html)
+[JS OOP???](https://wdi-sg.github.io/gitbook2020/02-js/js-oop/readme.html)
 
 
 ##### Assignment
@@ -316,7 +316,7 @@ code reading from previous assignment
 [CS - Linked List](https://my.generalassemb.ly/activities/379)
 
 ##### Topics
-[Devise](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/rails-security/devise.html)
+[Devise](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/rails-security/devise.html)
 
 ##### Assignment
 
@@ -328,7 +328,7 @@ code reading from previous assignment
 [CS - Stacks and Queues](https://my.generalassemb.ly/activities/803)
 
 ##### Topics
-[M-M](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/active-record/rails-M-M/readme.html)
+[M-M](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/active-record/rails-M-M/readme.html)
 
 
 
@@ -343,8 +343,8 @@ code reading from previous assignment
 [CS - Hash Tables 2 - reading only](https://my.generalassemb.ly/activities/761)
 
 ##### Topics
-[Security](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/rails-security/readme.html)
-[Model Validations](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/rails-validation/readme.html)
+[Security](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/rails-security/readme.html)
+[Model Validations](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/rails-validation/readme.html)
 
 #### Day 5
 
@@ -352,7 +352,7 @@ code reading from previous assignment
 [CS - Hash Tables 2 - coding](https://my.generalassemb.ly/activities/761)
 
 ##### Topics
-[Asset Pipeline](https://felixander-loetama.gitbook.io/sei-gitbook-2020/06-ruby-rails/rails-assets-frontend/sass.html)
+[Asset Pipeline](https://wdi-sg.github.io/gitbook2020/06-ruby-rails/rails-assets-frontend/sass.html)
 
 [Git Branches]()
 [Git Workflow]()
@@ -387,7 +387,7 @@ code reading from previous assignment
 ##### Topics
 [Intro to Webpack](10-react/webpack-intro/readme.md)
 [Intro to React](10-react/react-intro/intro.md)
-[React Component Review](https://felixander-loetama.gitbook.io/sei-gitbook-2020/10-react/react-intro/components.html)
+[React Component Review](https://wdi-sg.github.io/gitbook2020/10-react/react-intro/components.html)
 
 ##### Assignment
 [React Tweet](https://github.com/wdi-sg/tweet-react)
@@ -411,8 +411,8 @@ code reading from previous assignment
 
 ##### Topics
 [react sass](10-react/react-intro/react-sass.md)
-[Lifting Functions](https://felixander-loetama.gitbook.io/sei-gitbook-2020/10-react/react-intro/lifting.html)
-[ES6 destructure](https://felixander-loetama.gitbook.io/sei-gitbook-2020/10-react/react-intro/es6-spread.html)
+[Lifting Functions](https://wdi-sg.github.io/gitbook2020/10-react/react-intro/lifting.html)
+[ES6 destructure](https://wdi-sg.github.io/gitbook2020/10-react/react-intro/es6-spread.html)
 
 ##### Assignment
 [todo part 2](https://github.com/wdi-sg/todo-react/blob/master/part2.md)
@@ -424,7 +424,7 @@ code reading from previous assignment
 ##### Morning Exercise
 
 ##### Topics
-[full stack react](https://felixander-loetama.gitbook.io/sei-gitbook-2020/10-react/react-webpack/webpacker-fullstack.html)
+[full stack react](https://wdi-sg.github.io/gitbook2020/10-react/react-webpack/webpacker-fullstack.html)
 
 [webpacker]()
 
@@ -437,7 +437,7 @@ code reading from previous assignment
 
 ##### Topics
 
-[virtual DOM](https://felixander-loetama.gitbook.io/sei-gitbook-2020/10-react/react-intro/state.html)
+[virtual DOM](https://wdi-sg.github.io/gitbook2020/10-react/react-intro/state.html)
 
 ##### Assignment
 
