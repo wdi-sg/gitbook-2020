@@ -28,7 +28,7 @@ Most programs you think of are interactive. They do different things depending o
 
 In order to build programs that represent the real world like the problem statements above, we must have more tools than simply naming variables and assigning them numbers or strings.
 
-We can be explicit about using `numbers`, `booleans` and `strings` to represent the data our programs capture and process. RThe simplest way to do this is by _naming_.
+We can be explicit about using `numbers`, `booleans` and `strings` to represent the data our programs capture and process. The simplest way to do this is by _naming_.
 
 Once we are explicit about these things we can design our programs to deal with these underlying basic types while representing our data clearly. Simply by naming the data represented in our programs \(variables, functions and parameters \) we are describing the kind of data these represent.
 
