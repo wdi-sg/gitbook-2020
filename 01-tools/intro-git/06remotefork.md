@@ -2,11 +2,12 @@
 
 ## 1.Fork the Repo:
 
-Click on the fork button on the github.com repo page. \(Ex: [https://github.com/wdi-sg/express-reference](https://github.com/wdi-sg/express-reference) \)
+Click on the fork button on the github.com repo page. \(Ex: [Assignment 1](https://github.com/wdi-sg/temperature_converter) \)
 
 ## 2. Once github has copied the repo over into your account, `CLONE` it to your local computer with the HTTPS url
 
-### 2b. Use normal local git workflow \([https://wdi-sg.github.io/gitbook-2018/01-workflow/intro-git/03localgit.html\)\[https://wdi-sg.github.io/gitbook-2018/01-workflow/intro-git/03localgit.html](https://wdi-sg.github.io/gitbook-2018/01-workflow/intro-git/03localgit.html%29[https://wdi-sg.github.io/gitbook-2018/01-workflow/intro-git/03localgit.html)\]
+### 2b. Use normal local git workflow 
+[Local GIT](https://wdi-sg.github.io/gitbook2020/01-tools/intro-git/03localgit.html)
 
 * **change**
 * `git status`
@@ -35,7 +36,7 @@ Use the `git remote add upstream` command.
 Example:
 
 ```text
-git remote add upstream https://github.com/wdi-sg/express-reference.git
+git remote add upstream https://github.com/wdi-sg/unit1-template.git
 ```
 
 1. Get the changes. Warning: this can sometimes cause conflicts in your repo.
