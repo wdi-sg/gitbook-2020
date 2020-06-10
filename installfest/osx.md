@@ -91,6 +91,12 @@ Create a new shell config file.
 touch ~/.profile
 ```
 
+Then open this new file in a text editor such as TextEdit
+
+```text
+open ~/.profile
+```
+
 Put this code inside:
 
 ```text
@@ -110,6 +116,7 @@ function profilerefresh() {
   source ~/.profile
 }
 ```
+Save the file, then close the text editor.
 
 Run this on your terminal:
 
