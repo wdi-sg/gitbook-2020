@@ -118,11 +118,11 @@ No Assignment
 [CSS Airbnb](https://github.com/wdi-sg/css-airbnb)
 
 ##### Topics
-[Browser JS](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/readme.html)
+[Browser JS](https://wdi-sg.github.io/gitbook2020/02-js-intro/browser-js/)
 
-[JS DOM](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/js-dom-manipulation.html)
+[JS DOM](https://wdi-sg.github.io/gitbook2020/02-js-intro/browser-js/js-dom-manipulation.html)
 
-[JS DOM CREATION](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/js-dom-manipulation-creation.html)
+[JS DOM CREATION](https://wdi-sg.github.io/gitbook2020/02-js-intro/browser-js/js-dom-manipulation-creation.html)
 
 [CSS Flex Box](https://wdi-sg.github.io/gitbook2020/03-html-css/positioning/08layout-flexbox.html)
 
@@ -140,9 +140,9 @@ https://github.com/wdi-sg/brook-and-lyn
 
 ##### Topics
 
-[JS DOM Events](https://wdi-sg.github.io/gitbook2020/02-js/browser-js/js-dom-events.html)
+[JS DOM Events](https://wdi-sg.github.io/gitbook2020/02-js-intro/browser-js/js-dom-events.html)
 
-[CSS Bootstrap](https://wdi-sg.github.io/gitbook2020/03-html-css/css-bootstrap/bootstrap.html)
+[CSS Bootstrap](https://wdi-sg.github.io/gitbook2020/03-html-css/bootstrap.html)
 
 ##### Lab
 [Free Code Camp](https://www.freecodecamp.org/)
