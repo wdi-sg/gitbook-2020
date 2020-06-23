@@ -4,7 +4,7 @@
 
 ## SEI Singapore
 
-Welcome to General Assembly's Software Engineering Immersive - Singapore Edition! [This Gitbook](https://wdi-sg.github.io/gitbook2020/) is the primary resource used throughout the course, save it to your favorites and refer to it often!
+Welcome to General Assembly's Software Engineering Immersive - Singapore Edition! [This Gitbook](https://wdi-sg.github.io/gitbook-2020/) is the primary resource used throughout the course, save it to your favorites and refer to it often!
 
 ### Important Policies
 
